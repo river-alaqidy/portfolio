@@ -2,6 +2,7 @@
 
 ## Stack
 Frontend: React + Tailwind CSS
+
 Backend: Express.js
 
 Potential Backend Options:
