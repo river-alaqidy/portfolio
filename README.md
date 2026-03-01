@@ -1,5 +1,20 @@
 # React + Vite + Tailwind CSS
 
+## Portfolio Sections
+### JRP
+1. Rotations
+2. About JRP
+4. Professional Development
+5. Skills
+
+### Regular
+1. Side Projects
+2. Work experience 
+    * JRP - link to jrp side
+    * Web Developer SSEC
+    * Capstone Project with PBS WI
+    * Peer Mentor/Teaching Assistant
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

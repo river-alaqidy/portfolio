@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 
 function App() {
 
@@ -11,7 +10,7 @@ function App() {
 
   return (
     <>
-    <h1 className="text-3xl font-bold text-blue-500">
+    <h1 className="text-red-500 text-3xl">
       Hello, Tailwind + Vite + React!
     </h1>
     <button onClick={() => setCount(prev => prev + 1)}>
