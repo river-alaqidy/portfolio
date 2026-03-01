@@ -7,7 +7,7 @@ export const experiences = [
     org: 'Space Science and Engineering Center...',
     description: '...',
     chips: ['JavaScript', 'React', 'Python'],
-    years: '2023–2024',
+    years: '2024–2025',
   },
 ]
 

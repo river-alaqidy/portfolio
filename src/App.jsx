@@ -1,22 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { cn } from './lib/utils'
+import Header from './components/layout/Header'
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const [mode, setMode] = useState('jrp')
+
+  const modeStyles = {
+    jrp: 'bg-off-white text-dark',
+    exp: 'bg-dark text-off-white',
+  }
 
   useEffect(() => {
-
-  }, [])
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [mode])
 
   return (
-    <>
-    <h1 className="text-red-500 text-3xl">
-      Hello, Tailwind + Vite + React!
-    </h1>
-    <button onClick={() => setCount(prev => prev + 1)}>
-      Testing {count}
-    </button>
-    </>
+    <div className={cn('min-h-screen transition-colors duration-500 ease-in-out', modeStyles[mode])}>
+      <Header mode={mode} setMode={setMode} />
+    </div>
   )
 }
 
