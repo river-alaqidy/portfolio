@@ -7,16 +7,20 @@ function App() {
   const [mode, setMode] = useState('jrp')
 
   const modeStyles = {
-    jrp: 'bg-off-white text-dark',
-    exp: 'bg-dark text-off-white',
+    jrp: 'bg-off-white text-dark', // light mode
+    exp: 'bg-dark text-off-white', // dark mode
   }
 
+  // when changing between jrp/exp, go to top of page
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [mode])
 
   return (
-    <div className={cn('min-h-screen transition-colors duration-500 ease-in-out', modeStyles[mode])}>
+    <div className={cn(
+      "min-h-screen flex flex-col transition-colors duration-500",
+      modeStyles[mode]
+    )}>
       <Header mode={mode} setMode={setMode} />
     </div>
   )
