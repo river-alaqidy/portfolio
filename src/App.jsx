@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className={cn(
-      "min-h-screen flex flex-col transition-colors duration-500",
+      "min-h-screen flex flex-col transition-colors duration-600",
       modeStyles[mode]
     )}>
       <Header mode={mode} setMode={setMode} />
