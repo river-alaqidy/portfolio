@@ -4,7 +4,7 @@ export const rotations = [
     title: "IT User Support",
     badge: "done",
     period: "August 2025 - February 2026",
-    desc: "Provided General IT Support for PBS Wisconsin. Helped Automate assistance and increase efficiency by introducting BigFix Admin to organization.",
+    desc: "Provided General IT Support for PBS Wisconsin. Helped automate assistance and increase efficiency by introducing BigFix Admin to the organization.",
   },
   {
     num: "02",
@@ -18,14 +18,14 @@ export const rotations = [
     title: "TBD",
     badge: "next",
     period: "August 2026 - February 2027",
-    desc: "Coming Soon",
+    desc: "Third rotation discipline to be determined in collaboration with program coordinators. Possibilities include networking, cybersecurity, systems administration, or data infrastructure.",
   },
   {
     num: "04",
     title: "TBD",
     badge: "next",
     period: "February 2027 - August 2027",
-    desc: "Coming Soon",
+    desc: "Final rotation. Chosen based on program performance, interest, and available placements within UW–Madison IT.",
   },
 ];
 
@@ -46,6 +46,7 @@ export const prodevCards = [
     detail: "TODO",
   },
 ];
+
 export const skillGroups = [
   {
     title: "Technical",
@@ -54,7 +55,6 @@ export const skillGroups = [
       "AWS - Lambda, CloudWatch, SNS",
       "Git",
       "BigFix",
-
     ],
   },
   {
