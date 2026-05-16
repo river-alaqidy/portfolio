@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { cn } from './lib/utils'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 
@@ -18,10 +17,7 @@ function App() {
   }, [mode])
 
   return (
-    <div className={cn(
-      "min-h-screen flex flex-col transition-colors duration-600",
-      modeStyles[mode]
-    )}>
+    <div className={`min-h-screen flex flex-col transition-colors duration-600 ${modeStyles[mode]}`}>
       <Header mode={mode} setMode={setMode} />
       <Footer mode={mode} />
     </div>
