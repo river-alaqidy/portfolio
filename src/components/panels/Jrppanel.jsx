@@ -2,14 +2,12 @@ import { useEffect, useRef } from 'react'
 import Subnav from '../layout/Subnav'
 import { rotations, prodevCards, skillGroups, jrpSubnav } from '../../data/jrp'
 
-// Badge Helper
 const badgeClass = {
   done:   'bg-cardinal/8 text-cardinal',
   active: 'bg-cardinal text-white',
   next:   'border border-cardinal/13 text-muted-light',
 }
 
-// Reveal wrapper, fades + slides in when entering the viewport
 function Reveal({ children, className = '' }) {
   const ref = useRef(null)
 
@@ -41,16 +39,15 @@ function Reveal({ children, className = '' }) {
   )
 }
 
-// Section layout wrapper
 function ContentSection({ id, label, children }) {
   return (
     <Reveal>
       <section
         id={id}
         className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[5rem] items-start border-t border-cardinal/8"
-        style={{ gridTemplateColumns: '160px 1fr' }}
+        style={{ gridTemplateColumns: '160px 1fr', scrollMarginTop: "96px" }}
       >
-        <p className="text-[0.65rem] tracking-[0.12em] uppercase font-sans font-medium text-cardinal pt-[0.3rem] sticky"
+        <p className="text-[0.65rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem] sticky"
            style={{ top: 'calc(58px + 38px)' }}>
           {label}
         </p>
@@ -66,9 +63,9 @@ function JrpHero() {
       className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] grid gap-[5rem] items-end border-b border-cardinal/13"
       style={{ gridTemplateColumns: '1fr 1fr' }}
     >
-      {/* Left */}
+      {}
       <div>
-        <p className="text-[0.72rem] tracking-[0.12em] uppercase font-sans font-medium text-cardinal mb-[1.4rem] flex items-center gap-[0.7rem]">
+        <p className="text-[0.72rem] tracking-[0.12em] uppercase font-medium text-cardinal mb-[1.4rem] flex items-center gap-[0.7rem]">
           <span className="inline-block w-[22px] h-px bg-cardinal" />
           Current · UW–Madison IT Program
         </p>
@@ -83,7 +80,7 @@ function JrpHero() {
         </p>
       </div>
 
-      {/* Right — rotation preview card */}
+      {}
       <div className="flex flex-col border border-cardinal/13 rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(197,5,12,0.07)]">
         {rotations.map((r) => (
           <div
@@ -91,9 +88,9 @@ function JrpHero() {
             className="grid items-center gap-[1.2rem] px-6 py-[1.1rem] border-b border-cardinal/13 last:border-b-0 hover:bg-cardinal/2 transition-colors duration-200"
             style={{ gridTemplateColumns: 'auto 1fr auto' }}
           >
-            <span className="text-[0.62rem] tracking-[0.08em] font-sans text-cardinal opacity-70">{r.num}</span>
+            <span className="text-[0.62rem] tracking-[0.08em] text-cardinal opacity-70">{r.num}</span>
             <span className="text-[0.95rem] font-light text-dark">{r.title}</span>
-            <span className={`text-[0.5rem] tracking-[0.1em] uppercase font-sans px-[0.55rem] py-[0.18rem] rounded-full ${badgeClass[r.badge]}`}>
+            <span className={`text-[0.5rem] tracking-[0.1em] uppercase px-[0.55rem] py-[0.18rem] rounded-full ${badgeClass[r.badge]}`}>
               {r.badge === 'done' ? 'Complete' : r.badge === 'active' ? 'Active' : 'Upcoming'}
             </span>
           </div>
@@ -103,7 +100,6 @@ function JrpHero() {
   )
 }
 
-// Rotations section
 function Rotations() {
   return (
     <ContentSection id="jrp-rotations" label="Rotations">
@@ -114,14 +110,14 @@ function Rotations() {
             className="grid gap-[2rem] items-start py-8 border-b border-cardinal/13 last:border-b-0"
             style={{ gridTemplateColumns: '48px 1fr auto' }}
           >
-            <p className="text-[0.62rem] tracking-[0.08em] font-sans text-cardinal pt-[0.4rem]">{r.num}</p>
+            <p className="text-[0.62rem] tracking-[0.08em] text-cardinal pt-[0.4rem]">{r.num}</p>
             <div>
               <h3 className="text-[1.35rem] font-normal text-dark mb-[0.3rem]">{r.title}</h3>
-              <p className="text-[0.58rem] tracking-[0.06em] font-sans text-muted-light mb-[0.8rem]">{r.period}</p>
+              <p className="text-[0.58rem] tracking-[0.06em] text-muted-light mb-[0.8rem]">{r.period}</p>
               <p className="text-[0.95rem] leading-[1.73] text-dark/52 max-w-[500px]">{r.desc}</p>
             </div>
             <div className="pt-[0.4rem]">
-              <span className={`text-[0.5rem] tracking-[0.1em] uppercase font-sans px-[0.55rem] py-[0.18rem] rounded-full ${badgeClass[r.badge]}`}>
+              <span className={`text-[0.5rem] tracking-[0.1em] uppercase px-[0.55rem] py-[0.18rem] rounded-full ${badgeClass[r.badge]}`}>
                 {r.badge === 'done' ? 'Complete' : r.badge === 'active' ? 'Active' : 'Upcoming'}
               </span>
             </div>
@@ -132,7 +128,6 @@ function Rotations() {
   )
 }
 
-// About JRP
 function AboutJrp() {
   return (
     <ContentSection id="jrp-about" label="About the JRP">
@@ -160,7 +155,6 @@ function AboutJrp() {
   )
 }
 
-// Professional Development
 function ProDev() {
   return (
     <ContentSection id="jrp-prodev" label="Professional Dev">
@@ -173,9 +167,9 @@ function ProDev() {
             key={c.name}
             className="bg-cream rounded-[14px] p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200 hover:bg-white"
           >
-            <p className="text-[0.54rem] tracking-[0.18em] uppercase font-sans text-cardinal mb-[0.55rem]">{c.type}</p>
+            <p className="text-[0.54rem] tracking-[0.18em] uppercase text-cardinal mb-[0.55rem]">{c.type}</p>
             <p className="text-[1rem] font-normal text-dark mb-[0.35rem]">{c.name}</p>
-            <p className="text-[0.56rem] tracking-[0.04em] font-sans text-muted-light leading-[1.6]">{c.detail}</p>
+            <p className="text-[0.56rem] tracking-[0.04em] text-muted-light leading-[1.6]">{c.detail}</p>
           </div>
         ))}
       </div>
@@ -183,19 +177,18 @@ function ProDev() {
   )
 }
 
-// Skills
 function Skills() {
   return (
     <ContentSection id="jrp-skills" label="Skills">
       <div className="flex flex-col gap-[1.8rem]">
         {skillGroups.map((g) => (
           <div key={g.title}>
-            <p className="text-[0.58rem] tracking-[0.18em] uppercase font-sans text-cardinal mb-[0.7rem]">{g.title}</p>
+            <p className="text-[0.58rem] tracking-[0.18em] uppercase text-cardinal mb-[0.7rem]">{g.title}</p>
             <div className="flex flex-wrap gap-2">
               {g.tags.map((t) => (
                 <span
                   key={t}
-                  className="text-[0.6rem] tracking-[0.08em] uppercase font-sans px-[0.72rem] py-[0.3rem] rounded-full border border-cardinal/13 text-muted-light cursor-default transition-colors duration-200 hover:border-cardinal hover:text-cardinal"
+                  className="text-[0.6rem] tracking-[0.08em] uppercase px-[0.72rem] py-[0.3rem] rounded-full border border-cardinal/13 text-muted-light cursor-default transition-colors duration-200 hover:border-cardinal hover:text-cardinal"
                 >
                   {t}
                 </span>
@@ -208,7 +201,6 @@ function Skills() {
   )
 }
 
-// JRP Panel
 function JrpPanel({ active }) {
   return (
     <div
@@ -226,7 +218,7 @@ function JrpPanel({ active }) {
       `}</style>
 
       <JrpHero />
-      <Subnav key="jrp" mode="jrp" links={jrpSubnav} />
+      <Subnav mode="jrp" links={jrpSubnav} />
       <Rotations />
       <AboutJrp />
       <ProDev />

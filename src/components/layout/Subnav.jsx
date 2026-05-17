@@ -4,13 +4,16 @@ function Subnav({ mode, links }) {
   const [activeHref, setActiveHref] = useState(links[0]?.href)
   const ticking = useRef(false)
 
-  
-
   useEffect(() => {
     function onScroll() {
       if (ticking.current) return
       ticking.current = true
       requestAnimationFrame(() => {
+        if (window.scrollY < 10) {
+          setActiveHref(links[0]?.href)
+          ticking.current = false
+          return
+        }
         const OFFSET = 58 + 40
         let current = links[0]?.href
         links.forEach(({ href }) => {
@@ -49,7 +52,7 @@ function Subnav({ mode, links }) {
           >
             <a
               href={href}
-              className={`block text-[0.6rem] tracking-[0.1em] uppercase font-sans no-underline transition-colors duration-200 px-[clamp(1rem,2.5vw,2rem)] py-[0.9rem] ${
+              className={`block text-[0.6rem] tracking-[0.1em] uppercase no-underline transition-colors duration-200 px-[clamp(1rem,2.5vw,2rem)] py-[0.9rem] ${
                 isActive
                   ? isJrp
                     ? 'text-cardinal shadow-[inset_3px_0_0_#C5050C] bg-cardinal/4'
