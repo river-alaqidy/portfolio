@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import Subnav from '../layout/Subnav'
 import { expEntries, sideProjects, expSubnav, expHeroPreview } from '../../data/exp'
 
-// Reveal wrapper
 function Reveal({ children, className = '' }) {
   const ref = useRef(null)
 
@@ -34,7 +33,6 @@ function Reveal({ children, className = '' }) {
   )
 }
 
-// Section layout wrapper (dark theme)
 function ContentSection({ id, label, children, noBorder = false }) {
   return (
     <Reveal>
@@ -43,10 +41,10 @@ function ContentSection({ id, label, children, noBorder = false }) {
         className={`px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[5rem] items-start ${
           noBorder ? '' : 'border-t border-amber/10'
         }`}
-        style={{ gridTemplateColumns: '160px 1fr' }}
+        style={{ gridTemplateColumns: '160px 1fr', scrollMarginTop: "96px" }}
       >
         <p
-          className="text-[0.65rem] tracking-[0.12em] uppercase font-sans font-medium text-amber/65 pt-[0.3rem] sticky"
+          className="text-[0.65rem] tracking-[0.12em] uppercase font-medium text-amber/65 pt-[0.3rem] sticky"
           style={{ top: 'calc(58px + 38px)' }}
         >
           {label}
@@ -57,16 +55,15 @@ function ContentSection({ id, label, children, noBorder = false }) {
   )
 }
 
-// Hero
 function ExpHero() {
   return (
     <div
       className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] grid gap-[5rem] items-end border-b border-amber/18"
       style={{ gridTemplateColumns: '1fr 1fr' }}
     >
-      {/* Left */}
+      {}
       <div>
-        <p className="text-[0.72rem] tracking-[0.12em] uppercase font-sans font-medium text-amber mb-[1.4rem] flex items-center gap-[0.7rem]">
+        <p className="text-[0.72rem] tracking-[0.12em] uppercase font-medium text-amber mb-[1.4rem] flex items-center gap-[0.7rem]">
           <span className="inline-block w-[22px] h-px bg-amber" />
           Before the JRP
         </p>
@@ -81,14 +78,14 @@ function ExpHero() {
         </p>
       </div>
 
-      {/* Right — experience preview card */}
+      {}
       <div className="flex flex-col border border-amber/18 rounded-xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.25)]">
         {expHeroPreview.map((row) => (
           <div
             key={row.title}
             className="px-[1.8rem] py-[1.3rem] border-b border-amber/18 last:border-b-0 hover:bg-amber/4 transition-colors duration-200 cursor-default"
           >
-            <p className="text-[0.52rem] tracking-[0.16em] uppercase font-sans text-amber/60 mb-[0.35rem]">
+            <p className="text-[0.52rem] tracking-[0.16em] uppercase text-amber/60 mb-[0.35rem]">
               {row.type}
             </p>
             <p className="text-[0.98rem] font-light text-off-white/70">
@@ -102,7 +99,6 @@ function ExpHero() {
   )
 }
 
-// Individual experience entry
 function ExpEntry({ entry }) {
   return (
     <div
@@ -110,14 +106,14 @@ function ExpEntry({ entry }) {
       style={{ gridTemplateColumns: '1fr auto' }}
     >
       <div>
-        <p className="text-[0.56rem] tracking-[0.18em] uppercase font-sans text-amber/65 mb-[0.55rem]">
+        <p className="text-[0.56rem] tracking-[0.18em] uppercase text-amber/65 mb-[0.55rem]">
           {entry.type}
         </p>
         <h2 className="text-[1.5rem] font-normal text-off-white leading-[1.15] mb-[0.3rem]">
           {entry.title}{' '}
           <em className="italic text-off-white/38">{entry.titleEm}</em>
         </h2>
-        <p className="text-[0.58rem] tracking-[0.08em] font-sans text-off-white/25 mb-[1.1rem]">
+        <p className="text-[0.58rem] tracking-[0.08em] text-off-white/25 mb-[1.1rem]">
           {entry.org}
         </p>
         <p className="text-[0.98rem] leading-[1.78] text-off-white/42 max-w-[520px] mb-[1.3rem]">
@@ -127,38 +123,37 @@ function ExpEntry({ entry }) {
           {entry.chips.map((c) => (
             <span
               key={c}
-              className="text-[0.54rem] tracking-[0.1em] uppercase font-sans px-[0.62rem] py-[0.24rem] rounded-full border border-amber/20 text-amber/55 cursor-default transition-colors duration-200 hover:border-amber hover:text-amber"
+              className="text-[0.54rem] tracking-[0.1em] uppercase px-[0.62rem] py-[0.24rem] rounded-full border border-amber/20 text-amber/55 cursor-default transition-colors duration-200 hover:border-amber hover:text-amber"
             >
               {c}
             </span>
           ))}
         </div>
       </div>
-      <span className="text-[0.6rem] tracking-[0.1em] font-sans text-amber/40 whitespace-nowrap pt-[0.3rem]">
+      <span className="text-[0.6rem] tracking-[0.1em] text-amber/40 whitespace-nowrap pt-[0.3rem]">
         {entry.year}
       </span>
     </div>
   )
 }
 
-// Side Projects
 function SideProjects() {
   return (
     <Reveal>
       <section
         id="exp-projects"
         className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] border-t border-amber/10"
-        style={{ background: 'rgba(196,154,46,0.03)' }}
+        style={{ background: 'rgba(196,154,46,0.03)', scrollMarginTop: "96px" }}
       >
-        {/* Header row */}
+        {}
         <div
           className="grid gap-[5rem] mb-8"
           style={{ gridTemplateColumns: '160px 1fr' }}
         >
-          <p className="text-[0.65rem] tracking-[0.12em] uppercase font-sans text-amber/45 pt-[0.3rem]">
+          <p className="text-[0.65rem] tracking-[0.12em] uppercase text-amber/45 pt-[0.3rem]">
             Side Projects
           </p>
-          <p className="text-[0.68rem] tracking-[0.04em] font-sans text-off-white/32 leading-[1.72] max-w-[540px]">
+          <p className="text-[0.68rem] tracking-[0.04em] text-off-white/32 leading-[1.72] max-w-[540px]">
             Things I build in my free time — nothing production-scale, but good
             enough to show how I think and what I'm curious about. Full source
             on{' '}
@@ -173,12 +168,12 @@ function SideProjects() {
           </p>
         </div>
 
-        {/* Project list */}
+        {}
         <div
           className="grid gap-[5rem]"
           style={{ gridTemplateColumns: '160px 1fr' }}
         >
-          <div /> {/* spacer */}
+          <div /> {}
           <div className="flex flex-col">
             {sideProjects.map((p, i) => (
               <div
@@ -191,17 +186,17 @@ function SideProjects() {
                   <span className="text-[1rem] font-light text-off-white/55 whitespace-nowrap group-hover:text-off-white/80 transition-colors duration-200">
                     {p.name}
                   </span>
-                  <span className="text-[0.58rem] tracking-[0.03em] font-sans text-off-white/22 overflow-hidden text-ellipsis whitespace-nowrap group-hover:text-off-white/38 transition-colors duration-200">
+                  <span className="text-[0.58rem] tracking-[0.03em] text-off-white/22 overflow-hidden text-ellipsis whitespace-nowrap group-hover:text-off-white/38 transition-colors duration-200">
                     {p.desc}
                   </span>
                 </div>
                 <div className="flex items-center gap-4 flex-shrink-0">
-                  <span className="text-[0.54rem] tracking-[0.1em] uppercase font-sans text-amber/35">
+                  <span className="text-[0.54rem] tracking-[0.1em] uppercase text-amber/35">
                     {p.lang}
                   </span>
                   <a
                     href={p.href || '#'}
-                    className="text-[0.58rem] tracking-[0.1em] uppercase font-sans text-amber/40 border border-amber/15 rounded-full px-[0.6rem] py-[0.2rem] no-underline transition-colors duration-200 hover:text-amber hover:border-amber/50"
+                    className="text-[0.58rem] tracking-[0.1em] uppercase text-amber/40 border border-amber/15 rounded-full px-[0.6rem] py-[0.2rem] no-underline transition-colors duration-200 hover:text-amber hover:border-amber/50"
                   >
                     GitHub
                   </a>
@@ -215,7 +210,6 @@ function SideProjects() {
   )
 }
 
-// Exp Panel
 function ExpPanel({ active }) {
   return (
     <div
@@ -233,7 +227,7 @@ function ExpPanel({ active }) {
       `}</style>
 
       <ExpHero />
-      <Subnav key="exp" mode="exp" links={expSubnav} />
+      <Subnav mode="exp" links={expSubnav} />
 
       {expEntries.map((entry) => (
         <ContentSection key={entry.id} id={entry.id} label={entry.sectionLabel}>
