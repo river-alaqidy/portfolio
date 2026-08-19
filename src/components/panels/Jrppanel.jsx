@@ -66,8 +66,8 @@ function JrpHero() {
       {}
       <div>
         <p className="text-[0.72rem] tracking-[0.12em] uppercase font-medium text-cardinal mb-[1.4rem] flex items-center gap-[0.7rem]">
-          <span className="inline-block w-[22px] h-px bg-cardinal" />
-          Current · UW–Madison IT Program
+          
+          University of Wisconsin - Madison
         </p>
         <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-light leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
           Job Rotation<br />
