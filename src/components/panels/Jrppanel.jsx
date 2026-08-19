@@ -44,11 +44,11 @@ function ContentSection({ id, label, children }) {
     <Reveal>
       <section
         id={id}
-        className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[5rem] items-start border-t border-cardinal/8"
-        style={{ gridTemplateColumns: '160px 1fr', scrollMarginTop: "96px" }}
+        className="px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[2rem] md:gap-[5rem] items-start border-t border-cardinal/8 grid-cols-1 md:grid-cols-[160px_1fr]"
+        style={{ scrollMarginTop: "96px" }}
       >
-        <p className="text-[0.65rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem] sticky"
-           style={{ top: 'calc(58px + 38px)' }}>
+        <p className="text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem] static md:sticky"
+           style={{ top: 'calc(58px + 38px + 12px)' }}>
           {label}
         </p>
         <div>{children}</div>

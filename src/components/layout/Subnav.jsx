@@ -14,6 +14,16 @@ function Subnav({ mode, links }) {
           ticking.current = false
           return
         }
+
+        const scrolledToBottom =
+          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+
+        if (scrolledToBottom) {
+          setActiveHref(links[links.length - 1]?.href)
+          ticking.current = false
+          return
+        }
+
         const OFFSET = 58 + 40
         let current = links[0]?.href
         links.forEach(({ href }) => {
@@ -29,6 +39,17 @@ function Subnav({ mode, links }) {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [links])
+
+  function handleClick(e, href) {
+    e.preventDefault()
+    const el = document.querySelector(href)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    // update URL without leaving a hash behind on reload
+    window.history.replaceState(null, '', window.location.pathname + window.location.search)
+    setActiveHref(href)
+  }
 
   const isJrp = mode === 'jrp'
 
@@ -52,6 +73,7 @@ function Subnav({ mode, links }) {
           >
             <a
               href={href}
+              onClick={(e) => handleClick(e, href)}
               className={`block text-[0.6rem] tracking-[0.1em] uppercase no-underline transition-colors duration-200 px-[clamp(1rem,2.5vw,2rem)] py-[0.9rem] ${
                 isActive
                   ? isJrp

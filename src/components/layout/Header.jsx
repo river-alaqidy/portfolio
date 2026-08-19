@@ -4,7 +4,7 @@ function Header({mode, setMode}) {
             <span className={`text-[.66rem] tracking-[0.2rem] uppercase flex items-center px-8 font-sans transition-colors duration-500 ${mode === 'jrp' ? 'text-cardinal' : 'text-amber/80'}`}>
                 River Alaqidy
             </span>
-            <div className="flex ml-auto h-full">
+            <div className="flex ml-auto h-full pr-6">
                 <button 
                     onClick={() => setMode('jrp')}
                     className={`relative text-[0.66rem] tracking-[0.14em] uppercase bg-transparent border-none cursor-pointer px-8 h-full transition-colors duration-300 font-sans ${mode === 'jrp' ? 'border-cardinal/13 text-cardinal' : 'border-amber/18 text-off-white/30 hover:text-off-white/65'}`}>
@@ -18,7 +18,7 @@ function Header({mode, setMode}) {
                     {mode === 'exp' && <span className="absolute bottom-0 left-0 right-0 h-0.75 rounded-[3px] bg-amber" />}
                 </button>
             </div>
-            <div className="hidden md:flex items-center gap-6 px-8">
+            {/* <div className="hidden md:flex items-center gap-6 px-8">
                 {["About", "Contact"].map((l) => (
                     <a 
                         key={l} 
@@ -27,7 +27,7 @@ function Header({mode, setMode}) {
                         {l}
                     </a>
                 ))}
-            </div>
+            </div> */}
         </header>
     )
 } 

@@ -24,7 +24,7 @@ function App() {
       <main className="flex flex-col flex-1">
         <JrpPanel active={mode === 'jrp'} />
         <ExpPanel active={mode === 'exp'} />
-        <About mode={mode} />
+        {/* <About mode={mode} /> */}
       </main>
 
       <Footer mode={mode} />
