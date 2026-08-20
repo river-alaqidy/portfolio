@@ -3,52 +3,82 @@ import { useState, useEffect, useRef } from 'react'
 function Subnav({ mode, links }) {
   const [activeHref, setActiveHref] = useState(links[0]?.href)
   const ticking = useRef(false)
+  const isNavigating = useRef(false)
+  const settleTimeout = useRef(null)
 
   useEffect(() => {
+    function computeActive() {
+      if (window.scrollY < 10) {
+        setActiveHref(links[0]?.href)
+        return
+      }
+
+      const scrolledToBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+
+      if (scrolledToBottom) {
+        setActiveHref(links[links.length - 1]?.href)
+        return
+      }
+
+      const OFFSET = 58 + 40
+      let current = links[0]?.href
+      links.forEach(({ href }) => {
+        const el = document.querySelector(href)
+        if (el && el.getBoundingClientRect().top <= OFFSET + 16) {
+          current = href
+        }
+      })
+      setActiveHref(current)
+    }
+
+    function scheduleSettleCheck() {
+      if (settleTimeout.current) clearTimeout(settleTimeout.current)
+      settleTimeout.current = setTimeout(() => {
+        isNavigating.current = false
+        computeActive()
+      }, 120)
+    }
+
     function onScroll() {
+      if (isNavigating.current) {
+        // still mid programmatic scroll — push the "settled" check out
+        // instead of highlighting off a transient in-flight position
+        scheduleSettleCheck()
+        return
+      }
       if (ticking.current) return
       ticking.current = true
       requestAnimationFrame(() => {
-        if (window.scrollY < 10) {
-          setActiveHref(links[0]?.href)
-          ticking.current = false
-          return
-        }
-
-        const scrolledToBottom =
-          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
-
-        if (scrolledToBottom) {
-          setActiveHref(links[links.length - 1]?.href)
-          ticking.current = false
-          return
-        }
-
-        const OFFSET = 58 + 40
-        let current = links[0]?.href
-        links.forEach(({ href }) => {
-          const el = document.querySelector(href)
-          if (el && el.getBoundingClientRect().top <= OFFSET + 16) {
-            current = href
-          }
-        })
-        setActiveHref(current)
+        computeActive()
         ticking.current = false
       })
     }
+
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (settleTimeout.current) clearTimeout(settleTimeout.current)
+    }
   }, [links])
 
   function handleClick(e, href) {
     e.preventDefault()
+    setActiveHref(href)
+    isNavigating.current = true
+
+    // fallback in case scrollIntoView doesn't fire any scroll events
+    // (e.g. clicking the section you're already at)
+    if (settleTimeout.current) clearTimeout(settleTimeout.current)
+    settleTimeout.current = setTimeout(() => {
+      isNavigating.current = false
+    }, 120)
+
     const el = document.querySelector(href)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-    // update URL without leaving a hash behind on reload
     window.history.replaceState(null, '', window.location.pathname + window.location.search)
-    setActiveHref(href)
   }
 
   const isJrp = mode === 'jrp'
@@ -67,14 +97,14 @@ function Subnav({ mode, links }) {
         return (
           <li
             key={href}
-            className={`border-r transition-colors duration-500 ${
+            className={`flex-1 border-r transition-colors duration-500 ${
               isJrp ? 'border-cardinal/13' : 'border-amber/18'
             }`}
           >
             <a
               href={href}
               onClick={(e) => handleClick(e, href)}
-              className={`block text-[0.6rem] tracking-[0.1em] uppercase no-underline transition-colors duration-200 px-[clamp(1rem,2.5vw,2rem)] py-[0.9rem] ${
+              className={`block text-center text-[0.6rem] tracking-[0.1em] uppercase no-underline transition-colors duration-200 px-[clamp(1rem,2.5vw,2rem)] py-[0.9rem] ${
                 isActive
                   ? isJrp
                     ? 'text-cardinal shadow-[inset_3px_0_0_#C5050C] bg-cardinal/4'
