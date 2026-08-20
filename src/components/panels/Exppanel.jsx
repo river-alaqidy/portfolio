@@ -68,11 +68,11 @@ function ExpHero() {
           Professional<br />
           <em className="text-amber" style={{ fontStyle: 'italic' }}>Experience</em>
         </h1>
-        {/* <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem]">
-          Three roles that built the foundation — a year of production web
-          development, a contracted AWS deployment, and a semester spent
-          teaching. Plus a few things I build just for fun.
-        </p> */}
+        <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem] mx-auto">
+          Background outside the Job Rotation Program, including web development, 
+          a capstone project, teaching, and projects I'm building for fun.
+
+        </p>
       </div>
 
       {}
