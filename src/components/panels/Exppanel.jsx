@@ -62,17 +62,17 @@ function ExpHero() {
       style={{ gridTemplateColumns: '1fr 1fr' }}
     >
       {}
-      <div>
+      <div className="text-center">
         
         <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-light leading-[1.06] tracking-[-0.03em] text-off-white mb-[1.3rem]">
           Professional<br />
           <em className="text-amber" style={{ fontStyle: 'italic' }}>Experience</em>
         </h1>
-        <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem]">
+        {/* <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem]">
           Three roles that built the foundation — a year of production web
           development, a contracted AWS deployment, and a semester spent
           teaching. Plus a few things I build just for fun.
-        </p>
+        </p> */}
       </div>
 
       {}

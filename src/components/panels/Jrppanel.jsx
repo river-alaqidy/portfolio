@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Subnav from '../layout/Subnav'
 import { rotations, prodevCards, skillGroups, jrpSubnav } from '../../data/jrp'
+import uwLogo from "../../assets/images/uw-logo-horizontal-color-web-digital.svg"
 
 const badgeClass = {
   done:   'bg-cardinal/8 text-cardinal',
@@ -64,20 +65,21 @@ function JrpHero() {
       style={{ gridTemplateColumns: '1fr 1fr' }}
     >
       {}
-      <div>
-        <p className="text-[0.72rem] tracking-[0.12em] uppercase font-medium text-cardinal mb-[1.4rem] flex items-center gap-[0.7rem]">
-          
-          University of Wisconsin - Madison
-        </p>
+      <div className='text-center'>
+        <img
+          src={uwLogo}
+          alt="University of Wisconsin–Madison"
+          className="h-20 w-auto mb-[1.4rem] block mx-auto"
+        />
         <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-light leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
           Job Rotation<br />
           <em className="italic text-cardinal not-italic" style={{ fontStyle: 'italic' }}>Program</em>
         </h1>
-        <p className="text-[1rem] leading-[1.78] text-muted-light max-w-[400px] mb-[2rem]">
+        {/* <p className="text-[1rem] leading-[1.78] text-muted-light max-w-[400px] mb-[2rem]">
           A structured two-year journey across four IT disciplines at the
           university — learning how large technical organizations work from the
           inside, six months at a time.
-        </p>
+        </p> */}
       </div>
 
       {}
@@ -157,7 +159,7 @@ function AboutJrp() {
 
 function ProDev() {
   return (
-    <ContentSection id="jrp-prodev" label="Professional Dev">
+    <ContentSection id="jrp-prodev" label="Professional Development">
       <div
         className="grid gap-3"
         style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))' }}

@@ -9,14 +9,14 @@ export const rotations = [
   {
     num: "02",
     title: "Software Engineering",
-    badge: "active",
+    badge: "done",
     period: "February 2026 - August 2026",
     desc: "Contributed to ROAD Student Facing Applications. Experienced development using Go and AWS Services (Lambda, CloudWatch, SNS).",
   },
   {
     num: "03",
-    title: "TBD",
-    badge: "next",
+    title: "Full Stack Software Development",
+    badge: "active",
     period: "August 2026 - February 2027",
     desc: "Third rotation discipline to be determined in collaboration with program coordinators. Possibilities include networking, cybersecurity, systems administration, or data infrastructure.",
   },
@@ -80,6 +80,6 @@ export const skillGroups = [
 export const jrpSubnav = [
   { href: "#jrp-rotations", label: "Rotations" },
   { href: "#jrp-about",     label: "About the JRP" },
-  { href: "#jrp-prodev",    label: "Professional Dev" },
+  { href: "#jrp-prodev",    label: "Prof Dev" },
   { href: "#jrp-skills",    label: "Skills" },
 ];
