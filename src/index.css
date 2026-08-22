@@ -10,3 +10,7 @@
   --color-cardinal-light: #F2C9CA;
   --color-cardinal-mid: #DC676B;
 }
+
+html {
+  overscroll-behavior-y: none; /*TODO: maybe not include this for mobile refreshing*/
+}

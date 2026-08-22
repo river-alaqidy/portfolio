@@ -2,15 +2,15 @@ function ExpPanel() {
      return <div className="flex px-20 gap-20 pt-20">
         <a 
             href="#"
-             class="transition-color duration-200 block border-2 border-amber bg-off-dark text-off-white p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-amber hover:translate-3 hover:bg-amber-dark hover:shadow-none hover:text-off-white sm:p-6"
+             className="transition-color duration-200 block border-2 border-amber bg-off-dark text-off-white p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-amber hover:translate-3 hover:bg-amber-dark hover:shadow-none hover:text-off-white sm:p-6"
         >
-            <span class="inline-flex items-center gap-1.5">
+            <span className="inline-flex items-center gap-1.5">
                 <svg
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
-                class="size-4"
+                className="size-4"
                 >
                 <path
                     fill-rule="evenodd"
@@ -19,31 +19,31 @@ function ExpPanel() {
                 />
                 </svg>
 
-                <time datetime="2025-04-01" class="text-xs/none font-semibold uppercase">
+                <time datetime="2025-04-01" className="text-xs/none font-semibold uppercase">
                 April 1, 2025
                 </time>
             </span>
 
-            <h3 class="mt-1 text-xl font-semibold">
+            <h3 className="mt-1 text-xl font-semibold">
                 How I built my first website with Nuxt, Tailwind CSS and Vercel
             </h3>
 
-            <p class="mt-2 line-clamp-2 text-pretty">
+            <p className="mt-2 line-clamp-2 text-pretty">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa
                 maiores deleniti consectetur nobis et eaque.
             </p>
         </a>
         <a
             href="#"
-            class="transition-color duration-200 block border-2 border-amber bg-off-dark text-off-white p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-amber hover:translate-3 hover:bg-amber-dark hover:shadow-none hover:text-off-white sm:p-6"
+            className="transition-color duration-200 block border-2 border-amber bg-off-dark text-off-white p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-amber hover:translate-3 hover:bg-amber-dark hover:shadow-none hover:text-off-white sm:p-6"
         >
-            <span class="inline-flex items-center gap-1.5">
+            <span className="inline-flex items-center gap-1.5">
                 <svg
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
-                class="size-4"
+                className="size-4"
                 >
                 <path
                     fill-rule="evenodd"
@@ -52,16 +52,16 @@ function ExpPanel() {
                 />
                 </svg>
 
-                <time datetime="2025-04-01" class="text-xs/none font-semibold uppercase">
+                <time datetime="2025-04-01" className="text-xs/none font-semibold uppercase">
                 April 1, 2025
                 </time>
             </span>
 
-            <h3 class="mt-1 text-xl font-semibold">
+            <h3 className="mt-1 text-xl font-semibold">
                 How I built my first website with Nuxt, Tailwind CSS and Vercel
             </h3>
 
-            <p class="mt-2 line-clamp-2 text-pretty">
+            <p className="mt-2 line-clamp-2 text-pretty">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa
                 maiores deleniti consectetur nobis et eaque.
             </p>

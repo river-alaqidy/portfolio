@@ -1,16 +1,19 @@
 function Header({mode, onJrp, onExp}) {
-    return <div className="pt-4">
-        <div className={`border-b-2 ${mode === "jrp" ? "border-cardinal" : "border-amber"} px-4 flex justify-between`}>
-            <h1 className={`px-2 py-2 font-semibold ${mode === "jrp" ? "text-dark" : "text-off-white"}`}>
+    return <div className={`pt-4 border-b-2 pb-4 ${mode === "jrp" ? "border-cardinal" : "border-amber"}`}>
+        <div className={"px-4 flex justify-between items-start"}>
+            <h1 
+                className={`transition-colors duration-200 font-semibold block border-2 ${mode == "jrp" ? "border-cardinal bg-off-white text-dark shadow-cardinal" : "border-amber bg-dark text-off-white shadow-amber"} p-4 shadow-[4px_4px_0_0] sm:p-6"`}
+            > 
                 River Alaqidy
+            
             </h1>
-            <div role="tablist" className="-mb-0.5 flex flex-row-reverse">
+            <div role="tablist" className="-mb-0.5 flex flex-row-reverse gap-4">
                 <button 
                 onClick={onExp}
                 role="tab"
                 aria-selected="true"
-                className={`cursor-pointer ${mode === "exp" ? "border-2 border-x-amber border-t-amber border-b-0 text-amber" : "text-dark/30 hover:text-cardinal hover:border-text-dark/65"} px-6 py-2 font-semibold`}
-                >
+                className={`cursor-pointer transition-colors duration-200 font-semibold block border-2 ${mode == "jrp" ? "border-cardinal bg-off-white text-dark shadow-cardinal hover:bg-cardinal-light hover:text-dark" : "border-amber bg-dark text-off-white shadow-amber hover:bg-amber-dark hover:text-off-white"} p-4 shadow-[4px_4px_0_0] hover:translate-1 hover:shadow-none sm:p-6"`}
+               >
                 Experience
                 </button>
 
@@ -18,9 +21,9 @@ function Header({mode, onJrp, onExp}) {
                 onClick={onJrp}
                 role="tab"
                 aria-selected="false"
-                className={`cursor-pointer ${mode === "jrp" ? "border-2 border-x-cardinal border-t-cardinal border-b-transparent text-dark" : "text-off-white/30 hover:text-off-white/65 hover:border-text-off-white/65"} px-6 py-2 font-semibold`}
-                >
-                JRP
+                className={`cursor-pointer transition-colors duration-200 font-semibold block border-2 ${mode == "jrp" ? "border-cardinal bg-off-white text-dark shadow-cardinal hover:bg-cardinal-light hover:text-dark" : "border-amber bg-dark text-off-white shadow-amber hover:bg-amber-dark hover:text-off-white"} p-4 shadow-[4px_4px_0_0] hover:translate-1 hover:shadow-none sm:p-6"`}
+               >
+                JRP Portfolio
                 </button>
             </div>
         </div>
