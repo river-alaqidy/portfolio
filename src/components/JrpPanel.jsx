@@ -7,6 +7,18 @@ const badgeLabels = {
     next: "Upcoming",
 };
 
+const badgeStyles = {
+    done: "border-cardinal bg-cardinal-light text-cardinal shadow-cardinal",
+    active: "border-cardinal bg-off-white text-cardinal shadow-cardinal",
+    next: "border-dark/15 bg-dark/5 text-dark/50 shadow-dark/15",
+};
+ 
+const badgeDotStyles = {
+    done: "bg-cardinal",
+    active: "bg-cardinal",
+    next: "bg-dark/40",
+};
+
 function ProfDev() {
   return (
     <section
@@ -51,16 +63,16 @@ function AboutJrp() {
 
       <div className="flex flex-col gap-[1.3rem] max-w-[600px]">
         <p className="text-[1.05rem] leading-[1.82] text-dark/58">
-          The Job Rotation Program at the University of Wisconsin–Madison
+          The <span className="text-dark">Job Rotation Program</span> at the <span className="text-cardinal"><em>University of Wisconsin–Madison </em></span>
           provides focused career development for participants in the
           professional field of their choice, with career tracks available in
-          finance, human resources, and information technology. It is a 2
-          year program, where Rotators get meaningful work experiences
-          through 4, 6 month long rotations in a variety of professional
+          finance, human resources, and information technology. It is a <span className="text-dark">2
+          year program</span>, where Rotators get meaningful work experiences
+          through 4, <span className="text-dark">6 month long rotations</span> in a variety of professional
           settings and job responsibilities.
         </p>
         <p className="text-[1.05rem] leading-[1.82] text-dark/58">
-          The Information Technology track within the Job Rotation Program
+          <span className="text-cardinal"><em>The Information Technology Track</em></span> within the Job Rotation Program
           allows early career IT Professionals to gain a well-rounded breadth
           of experiences in fields including but not limited to — software
           engineering, cybersecurity, IT support, networking, cloud, etc.
@@ -74,7 +86,7 @@ function AboutJrp() {
 
 function RotationCard({ rotation }) {
     return (
-        <div className="transition-color duration-200 block border-2 border-cardinal bg-off-white text-dark p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-cardinal hover:translate-3 hover:bg-cardinal-light hover:shadow-none hover:text-dark sm:p-6">
+        <div className="transition-color duration-200 flex h-full flex-col border-2 border-cardinal bg-off-white text-dark p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-cardinal hover:translate-3 hover:bg-cardinal-light hover:shadow-none hover:text-dark sm:p-6">
             <div className="flex items-start justify-between gap-4">
                 <span className="inline-flex items-center gap-1.5">
                     <span className="text-sm font-bold text-cardinal">{rotation.num}</span>
@@ -83,8 +95,8 @@ function RotationCard({ rotation }) {
                     </time>
                 </span>
  
-                <span className="inline-flex shrink-0 items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-xs/none font-semibold uppercase text-cardinal shadow-[2px_2px_0_0] shadow-cardinal">
-                    <span className="size-2 bg-cardinal"></span>
+                <span className={`inline-flex shrink-0 items-center gap-1.5 border-2 px-3 py-1.5 text-xs/none font-semibold uppercase shadow-[2px_2px_0_0] ${badgeStyles[rotation.badge] ?? badgeStyles.next}`}>
+                    <span className={`size-2 ${badgeDotStyles[rotation.badge] ?? badgeDotStyles.next}`}></span>
                     {badgeLabels[rotation.badge] ?? rotation.badge}
                 </span>
             </div>
@@ -117,7 +129,7 @@ function RotationCard({ rotation }) {
             </ul>
  
             {rotation.chips.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-2 pt-4">
                     {rotation.chips.map((chip, i) => (
                         <span
                             key={i}
@@ -146,6 +158,7 @@ function Rotations() {
         </section>
     );
 }
+
 function JrpHero() {
     return (<div 
             className="bg-cardinal-light/15 flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
@@ -154,7 +167,7 @@ function JrpHero() {
             <img 
                 src={uwLogo} 
                 alt="UW Madison Logo"
-                className="h-20 w-auto mb-[1.4rem] block mx-auto"
+                className="h-30 w-auto mb-[1.4rem] block mx-auto"
             />
             <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
                 Job Rotation<br />
@@ -162,166 +175,74 @@ function JrpHero() {
             </h1>
         </div>
         <div className="flex-1 divide-y-2 divide-cardinal border-2 border-cardinal shadow-[4px_4px_0_0] shadow-cardinal">
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+            <div>
+                <div
+                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                     <div className="flex gap-3">
                         <span className="font-semibold text-cardinal">01</span>
                         <span className="font-semibold">IT User Support</span>
                     </div>
-                    <div className="flex gap-3">
-                        <span
-                            className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
-                            >
-                            <span className="size-2 bg-cardinal"></span>
-
-                            Complete
-                        </span>
-                        <svg
-                            aria-hidden="true"
-                            className="size-5 shrink-0 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <span
+                        className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                         >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </div>
-                </summary>
-
-                <div className="border-t-2 border-cardinal p-4">
-                <p className="text-dark">
-                    Wisconsin Public Media August 2025 - Feburary 2026
-                </p>
+                        <span className="size-2 bg-cardinal"></span>
+ 
+                        Complete
+                    </span>
                 </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+            </div>
+            <div>
+                <div
+                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">02</span>
                     <span className="font-semibold">Software Engineering</span>
                 </div>
-                <div className="flex gap-3">
-                    <span
-                        className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
-                        >
-                        <span className="size-2 bg-cardinal"></span>
-
-                        Complete
-                    </span>
-                    <svg
-                        aria-hidden="true"
-                        className="size-5 shrink-0 group-open:-rotate-180"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                <span
+                    className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                     >
-                        <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                        />
-                    </svg>
+                    <span className="size-2 bg-cardinal"></span>
+ 
+                    Complete
+                </span>
                 </div>
-                </summary>
-
-                <div className="border-t-2 border-cardinal p-4">
-                <p className="text-dark">
-                    Registrar Office Application Development February 2026 - August 2026
-                </p>
-                </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+            </div>
+            <div>
+                <div
+                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">03</span>
                     <span className="font-semibold">Full Stack Software Development</span>
                 </div>
-                <div className="flex gap-3">
-                    <span
-                        className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-off-white px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
-                        >
-                        <span className="size-2 bg-cardinal"></span>
-
-                        Active
-                    </span>
-                    <svg
-                        aria-hidden="true"
-                        className="size-5 shrink-0 group-open:-rotate-180"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                <span
+                    className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-off-white px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                     >
-                        <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                        />
-                    </svg>
+                    <span className="size-2 bg-cardinal"></span>
+ 
+                    Active
+                </span>
                 </div>
-                </summary>
-
-                <div className="border-t-2 border-cardinal p-4">
-                <p className="text-dark">
-                    Graduate School OIT August 2026 - February 2027
-                </p>
-                </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+            </div>
+            <div>
+                <div
+                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">04</span>
                     <span className="font-semibold">TBD</span>
                 </div>
-                <div className="flex gap-3">
-                    <span
-                        className="inline-flex items-center gap-1.5 border-2 border-dark/15 bg-dark/5 px-3 py-1.5 text-sm/none font-semibold text-dark/50 shadow-[2px_2px_0_0] shadow-dark/15"
-                    >
-                    <span className="size-2 bg-dark/40"></span>
-
-                        Upcoming
-                    </span>
-                    <svg
-                        aria-hidden="true"
-                        className="size-5 shrink-0 group-open:-rotate-180"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                        />
-                    </svg>
+                <span
+                    className="inline-flex items-center gap-1.5 border-2 border-dark/15 bg-dark/5 px-3 py-1.5 text-sm/none font-semibold text-dark/50 shadow-[2px_2px_0_0] shadow-dark/15"
+                >
+                <span className="size-2 bg-dark/40"></span>
+ 
+                    Upcoming
+                </span>
                 </div>
-                </summary>
-
-                <div className="border-t-2 border-cardinal p-4">
-                <p className="text-dark">
-                    TBD Feburary 2027 - August 2027
-                </p>
-                </div>
-            </details>  
+            </div>
         </div>
     </div>);
 }

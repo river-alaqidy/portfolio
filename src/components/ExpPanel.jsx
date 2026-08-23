@@ -65,11 +65,12 @@ function ProjectsSection() {
                                 </span>
                             </div>
                             <div className="flex items-center gap-3 flex-shrink-0">
-                                <span className="border-2 border-amber bg-amber-dark px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-amber shadow-[2px_2px_0_0] shadow-amber">
+                                <span className="border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-off-white shadow-[2px_2px_0_0] shadow-amber">
                                     {p.lang}
                                 </span>
                                 <a
                                     href={p.href || "#"}
+                                    target="_blank"
                                     className="border-2 border-amber px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-amber no-underline shadow-[2px_2px_0_0] shadow-amber hover:bg-amber-dark transition-colors duration-200"
                                 >
                                     GitHub
@@ -124,7 +125,7 @@ function ExpEntry({ entry }) {
                 {entry.skills.map((skill, i) => (
                     <span
                         key={i}
-                        className="border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                        className="border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                     >
                         {skill}
                     </span>
@@ -164,169 +165,69 @@ function ExpHero() {
                 Professional<br />
                 <em className="italic text-amber not-italic" style={{ fontStyle: 'italic' }}>Experience</em>
             </h1>
-            <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem] mx-auto">Background outside the Job Rotation Program, including web development, a capstone project, teaching, and projects.</p>
+            <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem] mx-auto">Background outside the Job Rotation Program, including web development, a capstone project, teaching, and other projects.</p>
         </div>
         <div className="flex-1 divide-y-2 divide-amber border-2 border-amber shadow-[4px_4px_0_0] shadow-amber">
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark"
-                >
+            <div>
+                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
-                        <span className="font-semibold text-amber">01</span>
-                        <span className="font-semibold">IT User Support</span>
+                        {/* <span className="font-semibold text-amber">01</span> */}
+                        <span className="font-semibold">Junior Web Developer</span>
                     </div>
-                    <div className="flex gap-3">
-                        <span
-                            className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-amber shadow-[2px_2px_0_0] shadow-amber"
-                            >
-                            <span className="size-2 bg-amber"></span>
-
-                            Complete
-                        </span>
-                        <svg
-                            aria-hidden="true"
-                            className="size-5 shrink-0 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <span
+                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </div>
-                </summary>
-
-                <div className="border-t-2 border-amber p-4">
-                <p className="text-off-white">
-                    Wisconsin Public Media August 2025 - Feburary 2026
-                </p>
+                        <span className="size-2 bg-amber"></span>
+ 
+                        SSEC
+                    </span>
                 </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark"
-                >
+            </div>
+            <div>
+                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
-                        <span className="font-semibold text-amber">01</span>
-                        <span className="font-semibold">IT User Support</span>
+                        {/* <span className="font-semibold text-amber">01</span> */}
+                        <span className="font-semibold">AI Recommendation Engine</span>
                     </div>
-                    <div className="flex gap-3">
-                        <span
-                            className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-amber shadow-[2px_2px_0_0] shadow-amber"
-                            >
-                            <span className="size-2 bg-amber"></span>
-
-                            Complete
-                        </span>
-                        <svg
-                            aria-hidden="true"
-                            className="size-5 shrink-0 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                   <span
+                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </div>
-                </summary>
-
-                <div className="border-t-2 border-amber p-4">
-                <p className="text-off-white">
-                    Wisconsin Public Media August 2025 - Feburary 2026
-                </p>
+                        <span className="size-2 bg-amber"></span>
+ 
+                        PBS WI
+                    </span>
                 </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark"
-                >
+            </div>
+            <div>
+                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
-                        <span className="font-semibold text-amber">01</span>
-                        <span className="font-semibold">IT User Support</span>
+                        {/* <span className="font-semibold text-amber">01</span> */}
+                        <span className="font-semibold">Undergraduate Teaching Assistant</span>
                     </div>
-                    <div className="flex gap-3">
-                        <span
-                            className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-amber shadow-[2px_2px_0_0] shadow-amber"
-                            >
-                            <span className="size-2 bg-amber"></span>
-
-                            Complete
-                        </span>
-                        <svg
-                            aria-hidden="true"
-                            className="size-5 shrink-0 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <span
+                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </div>
-                </summary>
-
-                <div className="border-t-2 border-amber p-4">
-                <p className="text-off-white">
-                    Wisconsin Public Media August 2025 - Feburary 2026
-                </p>
+                        <span className="size-2 bg-amber"></span>
+ 
+                        CS 571 - UW
+                    </span>
                 </div>
-            </details>
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
-                <summary
-                className="flex cursor-pointer items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark"
-                >
+            </div>
+            <div>
+                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
-                        <span className="font-semibold text-amber">01</span>
-                        <span className="font-semibold">IT User Support</span>
+                        {/* <span className="font-semibold text-amber">01</span> */}
+                        <span className="font-semibold">Projects</span>
                     </div>
-                    <div className="flex gap-3">
-                        <span
-                            className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-amber shadow-[2px_2px_0_0] shadow-amber"
-                            >
-                            <span className="size-2 bg-amber"></span>
-
-                            Complete
-                        </span>
-                        <svg
-                            aria-hidden="true"
-                            className="size-5 shrink-0 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <span
+                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </div>
-                </summary>
-
-                <div className="border-t-2 border-amber p-4">
-                <p className="text-off-white">
-                    Wisconsin Public Media August 2025 - Feburary 2026
-                </p>
+                        <span className="size-2 bg-amber"></span>
+ 
+                        GitHub
+                    </span>
                 </div>
-            </details>  
+            </div>
         </div>
     </div>);
 }

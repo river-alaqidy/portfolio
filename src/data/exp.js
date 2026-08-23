@@ -30,7 +30,7 @@ const experience = [
     section: "Teaching",
     title: "Peer Mentor",
     dates: "September 2024 – April 2025",
-    org: "CS571 – Building User Interfaces, University of Wisconsin-Madison",
+    org: "Undergraduate Teaching Assistant for CS571 – Building User Interfaces, University of Wisconsin-Madison",
     location: "Madison, WI",
     skills: ["HTML", "CSS", "JavaScript", "React", "React Native", "UI/UX Heuristics"],
     bullets: [
@@ -44,8 +44,8 @@ const experience = [
 export default experience;
 
 export const sideProjects = [
-  { name: "Project One",   desc: "Short description of what it does and why you built it", lang: "Go",         href: "#" },
-  { name: "Project Two",   desc: "Short description of what it does and why you built it", lang: "JavaScript", href: "#" },
-  { name: "Project Three", desc: "Short description of what it does and why you built it", lang: "React",      href: "#" },
-  { name: "Project Four",  desc: "Short description of what it does and why you built it", lang: "SQL",        href: "#" },
+  { name: "Badger News",   desc: "Simple mobile newspaper app about Wisconsin Badgers", lang: "React Native", href: "https://github.com/river-alaqidy/BadgerNews" },
+  { name: "Snippet Box",   desc: "Practice structuring Golang applications, Lets people paste and share snippets of text", lang: "Go", href: "https://github.com/river-alaqidy/snippetbox" },
+  { name: "Computer Graphics Hand", desc: "3D computer graphics scene of a hand", lang: "JavaScript",      href: "https://github.com/river-alaqidy/Computer-Graphics-Hand" },
+  { name: "Housing Affordability",  desc: "Data analytics research conducted on the state of housing affordability in the United States.", lang: "Python",  href: "https://github.com/river-alaqidy/Housing-Affordability" },
 ];
