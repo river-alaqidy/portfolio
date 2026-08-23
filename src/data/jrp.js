@@ -22,7 +22,7 @@ export const rotations = [
   {
     num: '02',
     title: 'Software Engineer',
-    org: 'ROAD',
+    org: 'Registrar Office Application Development (ROAD)',
     period: 'February 2026 - August 2026',
     badge: 'done',
     bullets: [
