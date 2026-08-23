@@ -1,3 +1,76 @@
+import experience from "../data/exp";
+
+
+function ExpEntry({ entry }) {
+    return (
+        <div className="transition-color duration-200 block border-2 border-amber bg-off-dark text-off-white p-4 shadow-[4px_4px_0_0,8px_8px_0_0,12px_12px_0_0] shadow-amber hover:translate-3 hover:bg-amber-dark hover:shadow-none hover:text-off-white sm:p-6">
+            <span className="inline-flex items-center gap-1.5">
+                <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    className="size-4"
+                >
+                    <path
+                        fillRule="evenodd"
+                        d="M4 1.75a.75.75 0 0 1 1.5 0V3h5V1.75a.75.75 0 0 1 1.5 0V3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2V1.75ZM4.5 6a1 1 0 0 0-1 1v4.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-7Z"
+                        clipRule="evenodd"
+                    />
+                </svg>
+ 
+                <time className="text-xs/none font-semibold uppercase">
+                    {entry.dates}
+                </time>
+            </span>
+ 
+            <h3 className="mt-1 text-xl font-semibold">
+                {entry.title}
+            </h3>
+ 
+            <p className="mt-1 text-sm text-off-white/70">
+                {entry.org} · {entry.location}
+            </p>
+ 
+            <ul className="mt-2 list-disc pl-4 space-y-1 text-pretty">
+                {entry.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                ))}
+            </ul>
+
+            <div className="mt-10 flex flex-wrap gap-2">
+                {entry.skills.map((skill, i) => (
+                    <span
+                        key={i}
+                        className="border-2 border-amber bg-amber-dark px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                    >
+                        {skill}
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+}
+ 
+function ExpSection({ entry }) {
+    const id = entry.section.toLowerCase().replace(/\s+/g, "-");
+    return (
+        <section
+          id={id}
+          className="border-b-2 border-amber px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+        >
+          <div className="flex gap-[2rem] md:gap-[5rem] items-start">
+            <p className="w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
+              {entry.section}
+            </p>
+ 
+            <div className="flex-1">
+              <ExpEntry entry={entry} />
+            </div>
+          </div>
+        </section>
+    )
+}
 
 
 function ExpHero() {
@@ -179,6 +252,9 @@ function ExpHero() {
 function ExpPanel() {
     return <div>
         <ExpHero/>
+        {experience.map((entry, i) => (
+            <ExpSection key={i} entry={entry} />
+        ))}
     </div>
     //  return <div className="flex px-20 gap-20 pt-20">
     //     <a 
@@ -194,13 +270,13 @@ function ExpPanel() {
     //             className="size-4"
     //             >
     //             <path
-    //                 fill-rule="evenodd"
+    //                 fillRule="evenodd"
     //                 d="M4 1.75a.75.75 0 0 1 1.5 0V3h5V1.75a.75.75 0 0 1 1.5 0V3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2V1.75ZM4.5 6a1 1 0 0 0-1 1v4.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-7Z"
-    //                 clip-rule="evenodd"
+    //                 clipRule="evenodd"
     //             />
     //             </svg>
 
-    //             <time datetime="2025-04-01" className="text-xs/none font-semibold uppercase">
+    //             <time dateTime="2025-04-01" className="text-xs/none font-semibold uppercase">
     //             April 1, 2025
     //             </time>
     //         </span>
@@ -227,13 +303,13 @@ function ExpPanel() {
     //             className="size-4"
     //             >
     //             <path
-    //                 fill-rule="evenodd"
+    //                 fillRule="evenodd"
     //                 d="M4 1.75a.75.75 0 0 1 1.5 0V3h5V1.75a.75.75 0 0 1 1.5 0V3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2V1.75ZM4.5 6a1 1 0 0 0-1 1v4.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-7Z"
-    //                 clip-rule="evenodd"
+    //                 clipRule="evenodd"
     //             />
     //             </svg>
 
-    //             <time datetime="2025-04-01" className="text-xs/none font-semibold uppercase">
+    //             <time dateTime="2025-04-01" className="text-xs/none font-semibold uppercase">
     //             April 1, 2025
     //             </time>
     //         </span>
