@@ -1,5 +1,87 @@
 import experience from "../data/exp";
+import { sideProjects } from "../data/exp";
+import { useState } from "react";
 
+function ProjectsSection() {
+    const [hovered, setHovered] = useState(null);
+    const lastIndex = sideProjects.length - 1;
+
+    return (
+        <section
+          id="exp-projects"
+          className="bg-amber-dark/15 border-b-2 border-amber px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+          style={{ scrollMarginTop: "96px" }}
+        >
+            <div className="flex gap-[2rem] md:gap-[5rem] items-start mb-8">
+                <p className="w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
+                    Projects
+                </p>
+                <p className="pt-1.5 text-sm text-off-white/60 leading-[1.72] max-w-[540px]">
+                    Projects built outside of professional experience. Full source
+                    on{" "}
+                    <a
+                        href="https://github.com/river-alaqidy"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-amber border-b-2 border-amber/40 no-underline hover:border-amber transition-colors duration-200"
+                    >
+                        GitHub ↗
+                    </a>
+                </p>
+            </div>
+ 
+            <div className="flex gap-[2rem] md:gap-[5rem] items-start">
+                <div className="w-[10rem] shrink-0" />
+                <div
+                  className={`flex-1 flex flex-col border-t-2 border-b-2 transition-colors duration-200 ${
+                      hovered === 0 ? "border-t-amber" : "border-t-amber/20"
+                  } ${hovered === lastIndex ? "border-b-amber" : "border-b-amber/20"}`}
+                >
+                    {sideProjects.map((p, i) => (
+                        <div
+                            key={p.name}
+                            onMouseEnter={() => setHovered(i)}
+                            onMouseLeave={() => setHovered(null)}
+                            className={`flex items-baseline justify-between gap-8 py-[1.1rem] transition-colors duration-200 ${
+                                i === 0
+                                    ? ""
+                                    : `border-t-2 ${
+                                          hovered === i || hovered === i - 1
+                                              ? "border-t-amber"
+                                              : "border-t-amber/20"
+                                      }`
+                            } ${hovered === i ? "text-amber" : ""}`}
+                        >
+                            <div className="flex items-baseline gap-[1.2rem] flex-1 min-w-0">
+                                <span className={`text-[1rem] font-semibold whitespace-nowrap transition-colors duration-200 ${
+                                    hovered === i ? "text-amber" : "text-off-white"
+                                }`}>
+                                    {p.name}
+                                </span>
+                                <span className={`text-sm overflow-hidden text-ellipsis whitespace-nowrap transition-colors duration-200 ${
+                                    hovered === i ? "text-off-white/70" : "text-off-white/50"
+                                }`}>
+                                    {p.desc}
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-3 flex-shrink-0">
+                                <span className="border-2 border-amber bg-amber-dark px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-amber shadow-[2px_2px_0_0] shadow-amber">
+                                    {p.lang}
+                                </span>
+                                <a
+                                    href={p.href || "#"}
+                                    className="border-2 border-amber px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-amber no-underline shadow-[2px_2px_0_0] shadow-amber hover:bg-amber-dark transition-colors duration-200"
+                                >
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
 
 function ExpEntry({ entry }) {
     return (
@@ -255,6 +337,7 @@ function ExpPanel() {
         {experience.map((entry, i) => (
             <ExpSection key={i} entry={entry} />
         ))}
+        <ProjectsSection/>
     </div>
     //  return <div className="flex px-20 gap-20 pt-20">
     //     <a 

@@ -42,3 +42,10 @@ const experience = [
 ];
 
 export default experience;
+
+export const sideProjects = [
+  { name: "Project One",   desc: "Short description of what it does and why you built it", lang: "Go",         href: "#" },
+  { name: "Project Two",   desc: "Short description of what it does and why you built it", lang: "JavaScript", href: "#" },
+  { name: "Project Three", desc: "Short description of what it does and why you built it", lang: "React",      href: "#" },
+  { name: "Project Four",  desc: "Short description of what it does and why you built it", lang: "SQL",        href: "#" },
+];
