@@ -4,7 +4,7 @@ function Footer({mode}) {
         { label: "LinkedIn", href: "https://www.linkedin.com/in/river-alaqidy" },
     ]
     return <div>
-        <footer className={`px-[clamp(2rem,5vw,7rem)] py-[1.8rem] flex justify-between items-center border-t transition-colors duration-500 ${mode === 'jrp' ? "border-cardinal/13" : "border-amber/18"}`}>
+        <footer className={`px-[clamp(2rem,5vw,7rem)] py-[1.8rem] flex justify-between items-center transition-colors duration-500`}>
             <span className={`text-[0.58rem] tracking-[0.14em] uppercase transition-colors duration-500 font-sans ${mode === 'jrp' ? "text-muted-light" : "text-off-white/22"}`}>
                 River Alaqidy - Software Engineer | IT Professional
             </span>

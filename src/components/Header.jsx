@@ -1,5 +1,5 @@
 function Header({mode, onJrp, onExp}) {
-    return <div className={`pt-4 border-b-2 pb-4 ${mode === "jrp" ? "border-cardinal" : "border-amber"}`}>
+    return <div className={`pt-4 border-b-2 pb-4 ${mode === "jrp" ? "border-cardinal/35" : "border-amber/35"}`}>
         <div className={"px-4 flex justify-between items-start"}>
             <h1 
                 className={`transition-colors duration-200 font-semibold block border-2 ${mode == "jrp" ? "border-cardinal bg-off-white text-dark shadow-cardinal" : "border-amber bg-dark text-off-white shadow-amber"} p-4 shadow-[4px_4px_0_0] sm:p-6"`}

@@ -9,7 +9,7 @@ function ProjectsSection() {
     return (
         <section
           id="exp-projects"
-          className="bg-amber-dark/15 border-b-2 border-amber px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+          className="bg-amber-dark/15 border-b-2 border-amber/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
           style={{ scrollMarginTop: "96px" }}
         >
             <div className="flex gap-[2rem] md:gap-[5rem] items-start mb-8">
@@ -139,7 +139,7 @@ function ExpSection({ entry }) {
     return (
         <section
           id={id}
-          className="border-b-2 border-amber px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+          className="border-b-2 border-amber/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
         >
           <div className="flex gap-[2rem] md:gap-[5rem] items-start">
             <p className="w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
@@ -157,7 +157,7 @@ function ExpSection({ entry }) {
 
 function ExpHero() {
     return (<div 
-            className="flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-b border-amber"
+            className="flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-amber/35"
         >
         <div className="flex-1 text-center">
             <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-off-white mb-[1.3rem]">

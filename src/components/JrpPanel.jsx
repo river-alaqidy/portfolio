@@ -11,7 +11,7 @@ function ProfDev() {
   return (
     <section
       id="jrp-prodev"
-      className="border-b-2 border-cardinal px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+      className="border-b-2 border-cardinal/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
     >
       <div className="flex gap-[2rem] md:gap-[5rem] items-start">
         <p className="text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem]">
@@ -42,7 +42,7 @@ function AboutJrp() {
   return (
     <section
       id="jrp-about"
-      className="border-b-2 border-cardinal px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[2rem] md:gap-[5rem]"
+      className="border-b-2 border-cardinal/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)] grid gap-[2rem] md:gap-[5rem]"
     >
     <div className="max-w-[820px] mx-auto grid gap-[2rem] md:gap-[5rem] items-start grid-cols-1 md:grid-cols-[160px_1fr]">
       <p className="text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem]">
@@ -134,7 +134,7 @@ function RotationCard({ rotation }) {
  
 function Rotations() {
     return (
-        <section className="px-20 pt-20 pb-20 border-b-2 border-cardinal">
+        <section className="px-20 pt-15 pb-20 border-b-2 border-cardinal/35">
             <h2 className="text-5xl font-normal text-center mb-12 text-cardinal">
                 Rotations
             </h2>
@@ -148,7 +148,7 @@ function Rotations() {
 }
 function JrpHero() {
     return (<div 
-            className="flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-b border-cardinal"
+            className="bg-cardinal-light/15 flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
         >
         <div className="flex-1 text-center">
             <img 
