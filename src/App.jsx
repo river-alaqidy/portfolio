@@ -22,7 +22,7 @@ function App() {
       :
       <ExpPanel/>
     }
-    <Footer/>
+    <Footer mode={mode}/>
   </div>
 }
 export default App;
