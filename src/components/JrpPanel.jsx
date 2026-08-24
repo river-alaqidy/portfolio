@@ -215,7 +215,7 @@ function JrpHero() {
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">03</span>
-                    <span className="font-semibold">Full Stack Software Development</span>
+                    <span className="font-semibold">Full Stack Development</span>
                 </div>
                 <span
                     className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-off-white px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"

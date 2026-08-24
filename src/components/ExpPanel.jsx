@@ -199,7 +199,7 @@ function ExpHero() {
             <div>
                 <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
-                        <span className="font-semibold">Undergraduate Teaching Assistant</span>
+                        <span className="font-semibold">Teaching Assistant</span>
                     </div>
                     <span
                         className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
