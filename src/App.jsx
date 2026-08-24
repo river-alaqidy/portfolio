@@ -6,8 +6,9 @@ import ExpPanel from "./components/ExpPanel";
 
 function App() {
 
-  const [mode, setMode] = useState("jrp"); 
+  const [mode, setMode] = useState(() => sessionStorage.getItem("mode") || "jrp");
   const panelRef = useRef(null);
+  const prevModeRef = useRef(mode);
 
   const modeStyles = {
     jrp: 'bg-off-white text-dark',
@@ -15,8 +16,16 @@ function App() {
   }
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    //panelRef.current?.focus({ preventScroll: true });
+    sessionStorage.setItem("mode", mode);
+  }, [mode]);
+
+  useEffect(() => {
+    if (prevModeRef.current === mode) {
+      return;
+    }
+    prevModeRef.current = mode;
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    panelRef.current?.focus({ preventScroll: true });
   }, [mode]);
 
   return <div className={`min-h-screen w-full transition-color duration-600 ${modeStyles[mode]}`}>
