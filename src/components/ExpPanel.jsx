@@ -9,11 +9,11 @@ function ProjectsSection() {
     return (
         <section
           id="exp-projects"
-          className="bg-amber-dark/15 border-b-2 border-amber/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+          className="bg-amber-dark/15 border-b-2 border-amber/35 px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,5.5vw,5.5rem)]"
           style={{ scrollMarginTop: "96px" }}
         >
-            <div className="flex gap-[2rem] md:gap-[5rem] items-start mb-8">
-                <p className="w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
+            <div className="flex flex-col gap-3 lg:flex-row lg:gap-[5rem] items-start mb-8">
+                <p className="lg:w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
                     Projects
                 </p>
                 <p className="pt-1.5 text-sm text-off-white/60 leading-[1.72] max-w-[540px]">
@@ -30,10 +30,10 @@ function ProjectsSection() {
                 </p>
             </div>
  
-            <div className="flex gap-[2rem] md:gap-[5rem] items-start">
-                <div className="w-[10rem] shrink-0" />
+            <div className="flex gap-[2rem] lg:gap-[5rem] items-start">
+                <div className="hidden lg:block w-[10rem] shrink-0" />
                 <div
-                  className={`flex-1 flex flex-col border-t-2 border-b-2 transition-colors duration-200 ${
+                  className={`flex-1 min-w-0 flex flex-col border-t-2 border-b-2 transition-colors duration-200 ${
                       hovered === 0 ? "border-t-amber" : "border-t-amber/20"
                   } ${hovered === lastIndex ? "border-b-amber" : "border-b-amber/20"}`}
                 >
@@ -42,7 +42,7 @@ function ProjectsSection() {
                             key={p.name}
                             onMouseEnter={() => setHovered(i)}
                             onMouseLeave={() => setHovered(null)}
-                            className={`flex items-baseline justify-between gap-8 py-[1.1rem] transition-colors duration-200 ${
+                            className={`flex flex-col lg:flex-row lg:items-baseline lg:justify-between gap-2 lg:gap-8 py-[1.1rem] transition-colors duration-200 ${
                                 i === 0
                                     ? ""
                                     : `border-t-2 ${
@@ -52,19 +52,19 @@ function ProjectsSection() {
                                       }`
                             } ${hovered === i ? "text-amber" : ""}`}
                         >
-                            <div className="flex items-baseline gap-[1.2rem] flex-1 min-w-0">
+                            <div className="flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-[1.2rem] flex-1 min-w-0">
                                 <span className={`text-[1rem] font-semibold whitespace-nowrap transition-colors duration-200 ${
                                     hovered === i ? "text-amber" : "text-off-white"
                                 }`}>
                                     {p.name}
                                 </span>
-                                <span className={`text-sm overflow-hidden text-ellipsis whitespace-nowrap transition-colors duration-200 ${
+                                <span className={`text-sm min-w-0 lg:overflow-hidden lg:text-ellipsis lg:whitespace-nowrap transition-colors duration-200 ${
                                     hovered === i ? "text-off-white/70" : "text-off-white/50"
                                 }`}>
                                     {p.desc}
                                 </span>
                             </div>
-                            <div className="flex items-center gap-3 flex-shrink-0">
+                            <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
                                 <span className="border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-off-white shadow-[2px_2px_0_0] shadow-amber">
                                     {p.lang}
                                 </span>
@@ -140,10 +140,10 @@ function ExpSection({ entry }) {
     return (
         <section
           id={id}
-          className="border-b-2 border-amber/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+          className="border-b-2 border-amber/35 px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,5.5vw,5.5rem)]"
         >
-          <div className="flex gap-[2rem] md:gap-[5rem] items-start">
-            <p className="w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
+          <div className="flex flex-col gap-3 md:flex-row md:gap-[5rem] items-start">
+            <p className="md:w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-amber pt-[0.3rem]">
               {entry.section}
             </p>
  
@@ -158,18 +158,18 @@ function ExpSection({ entry }) {
 
 function ExpHero() {
     return (<div 
-            className="flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-amber/35"
+            className="flex flex-col lg:flex-row px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,7vw,6rem)] gap-[2.5rem] lg:gap-[5rem] items-center border-b-2 border-amber/35"
         >
         <div className="flex-1 text-center">
-            <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-off-white mb-[1.3rem]">
+            <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-off-white mb-[1.3rem]">
                 Professional<br />
                 <em className="italic text-amber not-italic" style={{ fontStyle: 'italic' }}>Experience</em>
             </h1>
             <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem] mx-auto">Background outside the Job Rotation Program, including web development, a capstone project, teaching, and other projects.</p>
         </div>
-        <div className="flex-1 divide-y-2 divide-amber border-2 border-amber shadow-[4px_4px_0_0] shadow-amber">
+        <div className="flex-1 w-full divide-y-2 divide-amber border-2 border-amber shadow-[4px_4px_0_0] shadow-amber">
             <div>
-                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
                         {/* <span className="font-semibold text-amber">01</span> */}
                         <span className="font-semibold">Junior Web Developer</span>
@@ -184,7 +184,7 @@ function ExpHero() {
                 </div>
             </div>
             <div>
-                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
                         {/* <span className="font-semibold text-amber">01</span> */}
                         <span className="font-semibold">AI Recommendation Engine</span>
@@ -199,7 +199,7 @@ function ExpHero() {
                 </div>
             </div>
             <div>
-                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
                         {/* <span className="font-semibold text-amber">01</span> */}
                         <span className="font-semibold">Undergraduate Teaching Assistant</span>
@@ -214,7 +214,7 @@ function ExpHero() {
                 </div>
             </div>
             <div>
-                <div className="flex items-center justify-between gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
+                <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-dark px-4 py-3 font-medium text-off-white hover:bg-amber-dark">
                     <div className="flex gap-3">
                         {/* <span className="font-semibold text-amber">01</span> */}
                         <span className="font-semibold">Projects</span>

@@ -57,7 +57,7 @@ export const rotations = [
   },
   {
     num: '03',
-    title: 'Full Stack Software Engineer',
+    title: 'Full Stack Software Developer',
     org: 'Graduate School OIT',
     period: 'August 2026 - February 2027',
     badge: 'active',

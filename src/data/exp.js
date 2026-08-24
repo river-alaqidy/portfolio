@@ -45,7 +45,7 @@ export default experience;
 
 export const sideProjects = [
   { name: "Badger News",   desc: "Simple mobile newspaper app about Wisconsin Badgers", lang: "React Native", href: "https://github.com/river-alaqidy/BadgerNews" },
-  { name: "Snippet Box",   desc: "Practice structuring Golang applications, Lets people paste and share snippets of text", lang: "Go", href: "https://github.com/river-alaqidy/snippetbox" },
+  { name: "Snippet Box",   desc: "Practice structuring Golang applications, lets people paste and share snippets of text", lang: "Go", href: "https://github.com/river-alaqidy/snippetbox" },
   { name: "Computer Graphics Hand", desc: "3D computer graphics scene of a hand", lang: "JavaScript",      href: "https://github.com/river-alaqidy/Computer-Graphics-Hand" },
   { name: "Housing Affordability",  desc: "Data analytics research conducted on the state of housing affordability in the United States.", lang: "Python",  href: "https://github.com/river-alaqidy/Housing-Affordability" },
 ];

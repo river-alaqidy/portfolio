@@ -146,11 +146,11 @@ function RotationCard({ rotation }) {
  
 function Rotations() {
     return (
-        <section className="px-20 pt-15 pb-20 border-b-2 border-cardinal/35">
-            <h2 className="text-5xl font-normal text-center mb-12 text-cardinal">
+        <section className="px-[clamp(1.25rem,7vw,7rem)] pt-[clamp(2.5rem,5vw,3.75rem)] pb-[clamp(2.5rem,5vw,5rem)] border-b-2 border-cardinal/35">
+            <h2 className="text-[clamp(2rem,5vw,3rem)] font-normal text-center mb-8 sm:mb-12 text-cardinal">
                 Rotations
             </h2>
-            <div className="grid grid-cols-2 gap-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
                 {rotations.map((rotation) => (
                     <RotationCard key={rotation.num} rotation={rotation} />
                 ))}
@@ -161,23 +161,23 @@ function Rotations() {
 
 function JrpHero() {
     return (<div 
-            className="bg-cardinal-light/15 flex px-[clamp(2rem,7vw,7rem)] py-[clamp(3.5rem,7vw,6rem)] gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
+            className="bg-cardinal-light/15 flex flex-col lg:flex-row px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,7vw,6rem)] gap-[2.5rem] lg:gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
         >
         <div className="flex-1 text-center">
             <img 
                 src={uwLogo} 
                 alt="UW Madison Logo"
-                className="h-30 w-auto mb-[1.4rem] block mx-auto"
+                className="h-20 sm:h-30 w-auto mb-[1.4rem] block mx-auto"
             />
-            <h1 className="text-[clamp(2.8rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
+            <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
                 Job Rotation<br />
                 <em className="italic text-cardinal not-italic" style={{ fontStyle: 'italic' }}>Program</em>
             </h1>
         </div>
-        <div className="flex-1 divide-y-2 divide-cardinal border-2 border-cardinal shadow-[4px_4px_0_0] shadow-cardinal">
+        <div className="flex-1 w-full divide-y-2 divide-cardinal border-2 border-cardinal shadow-[4px_4px_0_0] shadow-cardinal">
             <div>
                 <div
-                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+                className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                     <div className="flex gap-3">
                         <span className="font-semibold text-cardinal">01</span>
@@ -194,7 +194,7 @@ function JrpHero() {
             </div>
             <div>
                 <div
-                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+                className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">02</span>
@@ -211,7 +211,7 @@ function JrpHero() {
             </div>
             <div>
                 <div
-                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+                className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">03</span>
@@ -228,7 +228,7 @@ function JrpHero() {
             </div>
             <div>
                 <div
-                className="flex items-center justify-between gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
+                className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 bg-off-white px-4 py-3 font-medium text-dark hover:bg-cardinal-light"
                 >
                 <div className="flex gap-3">
                     <span className="font-semibold text-cardinal">04</span>
