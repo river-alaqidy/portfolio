@@ -27,15 +27,6 @@ function Header({mode, onJrp, onExp}) {
                 </button>
             </div>
         </div>
-
-        {/* <div role="tabpanel" className="mt-4">
-            <p className="text-black">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique, quae hic dicta
-                quo facere facilis praesentium a sunt, est quia pariatur nam, modi aut minus iste odio
-                consectetur molestias iusto cupiditate ullam laborum veniam quos officia. Quos, temporibus
-                perspiciatis!
-            </p>
-        </div> */}
     </div>
 }
 export default Header;

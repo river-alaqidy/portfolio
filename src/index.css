@@ -14,5 +14,5 @@
 }
 
 html {
-  overscroll-behavior-y: none; /*TODO: maybe not include this for mobile refreshing*/
+  overscroll-behavior-y: none;
 }

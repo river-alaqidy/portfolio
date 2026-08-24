@@ -1,5 +1,3 @@
-// TODO: highlight/bold keywords within bullet points
-
 export const rotations = [
   {
     num: '01',
@@ -34,23 +32,13 @@ export const rotations = [
         text: 'Rebuilt a containerized Java Spring enrollment API as a Golang AWS Lambda function, cutting infrastructure costs for a low-traffic internal service used by RO Student Services.',
         subBullets: [
           'API structured as a Golang Lambda Function that is triggered by an API Gateway. Implemented logging with CloudWatch to view status of requests, queries, and database connections.',
-        //   'Adjusted frontend cloudfront origins for new application routing structure.',
           'Costs decreased to ⅓ of previous reports due to replacing constantly running service with an invokable Lambda function to scale pricing relative to actual usage.',
           'Created unit tests for incremental development of application. Additionally made Docker containers to send http requests for local testing.',
         ],
       },
-    //   {
-    //     text: "Upgraded ROAD's cloudwatch team's notifier to utilize current AWS SDK v2 for Go.",
-    //     subBullets: [
-    //       "Cloudwatch team's notifier is a AWS Go Lambda function that receives a Cloudwatch Alert from an SNS topic and send to a Microsoft teams alert channel using webhooks.",
-    //       'Implemented mock and unit testing with AWS CLI for modified features.',
-    //     ],
-    //   },
     ],
     chips: [
-      'Golang', 'Java', 
-      // 'TypeScript', 
-      // 'Angular', 
+      'Golang', 'Java',  
       'Terraform', 'CI/CD',
       'AWS', 'Lambda', 'API Gateway', 'CloudWatch', 'Unit Testing', 'Agile/Scrum',
     ],
