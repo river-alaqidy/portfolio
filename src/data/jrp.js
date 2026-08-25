@@ -1,193 +1,86 @@
 export const rotations = [
   {
-    num: "01",
-    title: "IT User Support",
-    badge: "done",
-    period: "August 2025 - February 2026",
-    org: "PBS Wisconsin · Madison, WI",
+    num: '01',
+    title: 'IT Support Specialist',
+    org: 'Wisconsin Public Media (WPM)',
+    period: 'August 2025 - February 2026',
+    badge: 'done',
     bullets: [
-      "Provided generalist IT support for user tickets in osTicket and Slack, and resolved walk-in hardware/software issues while managing the computer lifecycle — imaging, decommissioning, and onboarding/offboarding users.",
-      "Audited and remediated computer vulnerabilities using Qualys, Cisco AMP, and SnipeIT, and implemented BigFix to automate remote software patching and issue resolution.",
-      "Completed AANTS network training and monitored and adjusted switches to resolve connectivity issues.",
-      "Wrote a Bash script to automate backup directory maintenance and set up Linux kiosk displays for building-wide TVs.",
+      'Provided generalist IT user support through ticket handling, walk in software and hardware technical issues.',
+      'Handled computer life cycle management for 400 person organization - including decommissioning and imaging computers, onboarding and offboarding technical set ups.',
+      'Utilized BigFix, Qualys and Cisco AMP for automated software patching and asset auditing. Targeted computer vulnerabilities across the organization and created scripts to remotely resolve issues without user interruptions.',
+      'Created UI experience for PBS WI Friends Board Portal. Improved site accessibility in compatible strategy to enhance workflows.',
+      'Set up linux kiosks on department TVs to display and rotate through PBS WI and WPR websites in lobbies and hallways.',
+      'Completed networking training and monitored and adjusted switches when issues arose.',
+      'Researched and tested transcription and diarization software to find cost effective options for audio file transcription.',
+      'Wrote bash scripts to maintain backup directories for internal IT resources.',
     ],
-    chips: ["osTicket", "SnipeIT", "Qualys", "Cisco AMP", "BigFix", "Linux", "Bash"],
+    chips: ['BigFix', 'osTicket', 'Qualys', 'Cisco AMP', 'SnipeIT', 'Linux', 'Bash'],
   },
   {
-    num: "02",
-    title: "Software Engineering",
-    badge: "done",
-    period: "February 2026 - August 2026",
-    org: "ROAD Student Facing Applications · Madison, WI",
+    num: '02',
+    title: 'Software Engineer',
+    org: 'Registrar Office Application Development (ROAD)',
+    period: 'February 2026 - August 2026',
+    badge: 'done',
     bullets: [
-      "Migrated an AWS Lambda alerting service from AWS SDK for Go v1 to v2, implementing unit and mock tests for a CloudWatch-to-Microsoft-Teams notification pipeline serving CSE and CAOS.",
-      "Rebuilt a containerized Java Spring enrollment API as a Golang AWS Lambda function, cutting infrastructure overhead for a low-traffic internal service used by RO Student Services.",
-      "Designed and deployed AWS resources (Lambda, API Gateway, IAM, CloudWatch) using Terraform, and built GitLab CI/CD pipelines to deploy across dev, test, and prod.",
-      "Built a Go server mux to route and query enrollment/validation requests, and updated CloudFront origin routing to support the new API.",
+      "Contributed to end-to-end development of student facing applications supplied by UW's Registrar Office, utilizing a stack consisting of Go, Java, Typescript, Angular, as well as AWS infrastructure and services.",
+      'Collaborated in a 7-person agile team, following scrum methodology to provide iterative updates and consistent product delivery.',
+      'Deployed and managed cloud infrastructure on AWS with Terraform and automated GitLab CI/CD pipelines.',
+      'Participated in code reviews of application features to continuously optimize changes and supply transparent feedback across the development team.',
+      {
+        text: 'Rebuilt a containerized Java Spring enrollment API as a Golang AWS Lambda function, cutting infrastructure costs for a low-traffic internal service used by RO Student Services.',
+        subBullets: [
+          'API structured as a Golang Lambda Function that is triggered by an API Gateway. Implemented logging with CloudWatch to view status of requests, queries, and database connections.',
+          'Costs decreased to ⅓ of previous reports due to replacing constantly running service with an invokable Lambda function to scale pricing relative to actual usage.',
+          'Created unit tests for incremental development of application. Additionally made Docker containers to send http requests for local testing.',
+        ],
+      },
     ],
-    chips: ["Go", "AWS Lambda", "API Gateway", "Terraform", "GitLab CI/CD", "CloudWatch"],
+    chips: [
+      'Golang', 'Java',  
+      'Terraform', 'CI/CD',
+      'AWS', 'Lambda', 'API Gateway', 'CloudWatch', 'Unit Testing', 'Agile/Scrum',
+    ],
   },
   {
-    num: "03",
-    title: "Full Stack Software Development",
-    badge: "active",
-    period: "August 2026 - February 2027",
-    org: "",
+    num: '03',
+    title: 'Full Stack Software Developer',
+    org: 'Graduate School OIT',
+    period: 'August 2026 - February 2027',
+    badge: 'active',
     bullets: [
-      "Upcoming",
+      'Update coming soon',
     ],
     chips: [],
   },
   {
-    num: "04",
-    title: "TBD",
-    badge: "next",
-    period: "February 2027 - August 2027",
-    org: "",
+    num: '04',
+    title: 'TBD',
+    org: '',
+    period: 'February 2027 - August 2027',
+    badge: 'next',
     bullets: [
-      "Upcoming",
+      'Upcoming',
     ],
     chips: [],
   },
-];
+]
 
 export const prodevCards = [
   {
-    type: "Seminar",
-    name: "FP2L",
-    detail: "TODO",
+    name: 'Fully Prepared to Lead (FP2L)',
+    type: 'Seminar',
+    detail: 'Series focused on practical ways to cultivate leadership, develop career growth goals, and improve corporate presentation skills.',
   },
   {
-    type: "Certification",
-    name: "AANTS",
-    detail: "TODO",
+    name: 'Authorized Agent Network Tool Suite (AANTS)',
+    type: 'Certification',
+    detail: 'Administrator training to configure networking equipment across UW campus.',
   },
   {
-    type: "Conference",
-    name: "ITCCC",
-    detail: "TODO",
+    name: 'IT Professionals Conference',
+    type: 'Conference',
+    detail: 'Event connecting IT Professionals across campus, designed to help attendees learn from each other through discussion of projects, experiences, and challenges.',
   },
-];
-
-export const skillGroups = [
-  {
-    title: "Technical",
-    tags: [
-      "Go",
-      "AWS - Lambda, CloudWatch, SNS",
-      "Git",
-      "BigFix",
-    ],
-  },
-  {
-    title: "IT Concepts",
-    tags: [
-      "Software Engineering",
-      "User Support",
-      "Computer Life Cycle Management",
-      "Networking Basics",
-    ],
-  },
-  {
-    title: "Process & Collaboration",
-    tags: [
-      "Agile / Scrum",
-      "Code Review",
-      "Sprint Planning",
-      "Documentation",
-    ],
-  },
-];
-
-export const jrpSubnav = [
-  { href: "#jrp-rotations", label: "Rotations" },
-  { href: "#jrp-about",     label: "About the JRP" },
-  { href: "#jrp-prodev",    label: "Prof Dev" },
-  { href: "#jrp-skills",    label: "Skills" },
-];
-
-// export const rotations = [
-//   {
-//     num: "01",
-//     title: "IT User Support",
-//     badge: "done",
-//     period: "August 2025 - February 2026",
-//     desc: "Provided General IT Support for PBS Wisconsin. Helped automate assistance and increase efficiency by introducing BigFix Admin to the organization.",
-//   },
-//   {
-//     num: "02",
-//     title: "Software Engineering",
-//     badge: "done",
-//     period: "February 2026 - August 2026",
-//     desc: "Contributed to ROAD Student Facing Applications. Experienced development using Go and AWS Services (Lambda, CloudWatch, SNS).",
-//   },
-//   {
-//     num: "03",
-//     title: "Full Stack Software Development",
-//     badge: "active",
-//     period: "August 2026 - February 2027",
-//     desc: "Third rotation discipline to be determined in collaboration with program coordinators. Possibilities include networking, cybersecurity, systems administration, or data infrastructure.",
-//   },
-//   {
-//     num: "04",
-//     title: "TBD",
-//     badge: "next",
-//     period: "February 2027 - August 2027",
-//     desc: "Final rotation. Chosen based on program performance, interest, and available placements within UW–Madison IT.",
-//   },
-// ];
-
-// export const prodevCards = [
-//   {
-//     type: "Seminar",
-//     name: "FP2L",
-//     detail: "TODO",
-//   },
-//   {
-//     type: "Certification",
-//     name: "AANTS",
-//     detail: "TODO",
-//   },
-//   {
-//     type: "Conference",
-//     name: "ITCCC",
-//     detail: "TODO",
-//   },
-// ];
-
-// export const skillGroups = [
-//   {
-//     title: "Technical",
-//     tags: [
-//       "Go",
-//       "AWS - Lambda, CloudWatch, SNS",
-//       "Git",
-//       "BigFix",
-//     ],
-//   },
-//   {
-//     title: "IT Concepts",
-//     tags: [
-//       "Software Engineering",
-//       "User Support",
-//       "Computer Life Cycle Management",
-//       "Networking Basics",
-//     ],
-//   },
-//   {
-//     title: "Process & Collaboration",
-//     tags: [
-//       "Agile / Scrum",
-//       "Code Review",
-//       "Sprint Planning",
-//       "Documentation",
-//     ],
-//   },
-// ];
-
-// export const jrpSubnav = [
-//   { href: "#jrp-rotations", label: "Rotations" },
-//   { href: "#jrp-about",     label: "About the JRP" },
-//   { href: "#jrp-prodev",    label: "Prof Dev" },
-//   { href: "#jrp-skills",    label: "Skills" },
-// ];
+]
