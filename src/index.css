@@ -3,46 +3,16 @@
 @theme {
   --color-cardinal:    #C5050C;
   --color-amber:       #C49A2E;
-  --color-amber-dk:    #A07C18;
-  --color-off-white:   #F6F3EE;
-  --color-cream:       #EDE9DF;
   --color-dark:        #1A1510;
-  --color-dark-mid:    #231B0F;
+  --color-off-white:   #F6F3EE;
+  --color-cardinal-dark:  #8A0308;
+  --color-amber-dark:    #8A6C1F;
+  --color-cardinal-light: #F2C9CA;
+  --color-cardinal-mid: #DC676B;
   --color-muted-light: #8A8078;
-
-  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-
-  --shadow-card:       0 2px 0 rgba(197,5,12,0.06), 0 4px 16px rgba(197,5,12,0.04);
-  --shadow-card-hover: 0 4px 0 rgba(197,5,12,0.08), 0 8px 24px rgba(197,5,12,0.06);
+  --color-cream:       #EDE9DF;
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-@keyframes panelIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 800px) {
-  [style*="grid-template-columns: 1fr 1fr"],
-  [style*="gridTemplateColumns: '1fr 1fr'"] {
-    grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
-  }
-
-  [style*="grid-template-columns: 160px 1fr"],
-  [style*="gridTemplateColumns: '160px 1fr'"] {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-
-  [style*="grid-template-columns: 48px 1fr auto"] {
-    grid-template-columns: 36px 1fr !important;
-  }
-
-  [style*="grid-template-columns: 1fr auto"] {
-    grid-template-columns: 1fr !important;
-  }
+  overscroll-behavior-y: none;
 }
