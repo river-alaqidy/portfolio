@@ -115,8 +115,32 @@ function Rotations() {
             <p className="text-[0.62rem] tracking-[0.08em] text-cardinal pt-[0.4rem]">{r.num}</p>
             <div>
               <h3 className="text-[1.35rem] font-normal text-dark mb-[0.3rem]">{r.title}</h3>
-              <p className="text-[0.58rem] tracking-[0.06em] text-muted-light mb-[0.8rem]">{r.period}</p>
-              <p className="text-[0.95rem] leading-[1.73] text-dark/52 max-w-[500px]">{r.desc}</p>
+              <p className="text-[0.58rem] tracking-[0.06em] text-muted-light mb-[0.15rem]">{r.period}</p>
+              {r.org && (
+                <p className="text-[0.58rem] tracking-[0.08em] text-dark/25 mb-[1.1rem]">{r.org}</p>
+              )}
+              <ul className="flex flex-col gap-[0.7rem] mb-[1.3rem] max-w-[560px]">
+                {r.bullets.map((b, i) => (
+                  <li
+                    key={i}
+                    className="text-[0.95rem] leading-[1.65] text-dark/52 pl-[1.1rem] relative before:content-['•'] before:absolute before:left-0 before:text-cardinal/40"
+                  >
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              {r.chips.length > 0 && (
+                <div className="flex flex-wrap gap-[0.45rem]">
+                  {r.chips.map((c) => (
+                    <span
+                      key={c}
+                      className="text-[0.54rem] tracking-[0.1em] uppercase px-[0.62rem] py-[0.24rem] rounded-full border border-cardinal/13 text-muted-light cursor-default transition-colors duration-200 hover:border-cardinal hover:text-cardinal"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
             <div className="pt-[0.4rem]">
               <span className={`text-[0.5rem] tracking-[0.1em] uppercase px-[0.55rem] py-[0.18rem] rounded-full ${badgeClass[r.badge]}`}>
