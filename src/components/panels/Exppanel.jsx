@@ -70,7 +70,7 @@ function ExpHero() {
         </h1>
         <p className="text-[1rem] leading-[1.78] text-off-white/38 max-w-[400px] mb-[2rem] mx-auto">
           Background outside the Job Rotation Program, including web development, 
-          a capstone project, teaching, and projects I'm building for fun.
+          a capstone project, teaching, and projects.
 
         </p>
       </div>
@@ -113,9 +113,16 @@ function ExpEntry({ entry }) {
         <p className="text-[0.58rem] tracking-[0.08em] text-off-white/25 mb-[1.1rem]">
           {entry.org}
         </p>
-        <p className="text-[0.98rem] leading-[1.78] text-off-white/42 max-w-[520px] mb-[1.3rem]">
-          {entry.body}
-        </p>
+        <ul className="flex flex-col gap-[0.7rem] mb-[1.3rem] max-w-[560px]">
+          {entry.bullets.map((b, i) => (
+            <li
+              key={i}
+              className="text-[0.95rem] leading-[1.65] text-off-white/42 pl-[1.1rem] relative before:content-['•'] before:absolute before:left-0 before:text-amber/40"
+            >
+              {b}
+            </li>
+          ))}
+        </ul>
         <div className="flex flex-wrap gap-[0.45rem]">
           {entry.chips.map((c) => (
             <span
