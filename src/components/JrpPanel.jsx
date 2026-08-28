@@ -1,4 +1,3 @@
-import uwLogo from "../assets/images/uw-logo-horizontal-color-web-digital.svg"
 import { rotations, prodevCards } from "../data/jrp"
 
 const badgeLabels = {
@@ -164,11 +163,9 @@ function JrpHero() {
             className="bg-cardinal-light/15 flex flex-col lg:flex-row px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,7vw,6rem)] gap-[2.5rem] lg:gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
         >
         <div className="flex-1 text-center">
-            <img 
-                src={uwLogo} 
-                alt="UW Madison Logo"
-                className="h-20 sm:h-30 w-auto mb-[1.4rem] block mx-auto"
-            />
+             <p className="text-xs sm:text-sm tracking-[0.3em] uppercase font-semibold text-cardinal mb-3">
+                University of Wisconsin &ndash; Madison
+            </p>
             <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
                 Job Rotation<br />
                 <em className="italic text-cardinal not-italic" style={{ fontStyle: 'italic' }}>Program</em>

@@ -30,14 +30,14 @@ function App() {
 
   return <div className={`min-h-screen w-full transition-color duration-600 ${modeStyles[mode]}`}>
     <Header mode={mode} onJrp={() => setMode("jrp")} onExp={() => setMode("exp")}/>
-    <div ref={panelRef} tabIndex={-1}>
+    <main ref={panelRef} tabIndex={-1}>
       {
         mode === "jrp" ?
         <JrpPanel/>
         :
         <ExpPanel/>
       }
-    </div>
+    </main>
     <Footer mode={mode}/>
   </div>
 }
