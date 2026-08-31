@@ -162,7 +162,7 @@ function JrpHero() {
             className="bg-cardinal-light/15 flex flex-col lg:flex-row px-[clamp(1.25rem,7vw,7rem)] py-[clamp(2.5rem,7vw,6rem)] gap-[2.5rem] lg:gap-[5rem] items-center border-b-2 border-b border-cardinal/35"
         >
         <div className="flex-1 text-center">
-             <p className="text-xs sm:text-sm tracking-[0.3em] uppercase font-semibold text-cardinal mb-3">
+            <p className="text-xs sm:text-sm tracking-[0.3em] uppercase font-semibold text-cardinal mb-3">
                 University of Wisconsin &ndash; Madison
             </p>
             <h1 className="text-[clamp(2.4rem,5.5vw,5rem)] font-normal leading-[1.06] tracking-[-0.03em] text-dark mb-[1.3rem]">
@@ -180,9 +180,9 @@ function JrpHero() {
                         <span className="font-semibold">IT User Support</span>
                     </div>
                     <span
-                        className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-cardinal bg-cardinal-light px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                         >
-                        <span className="size-2 bg-cardinal"></span>
+                        <span className="size-1.5 sm:size-2 bg-cardinal"></span>
  
                         Complete
                     </span>
@@ -197,9 +197,9 @@ function JrpHero() {
                     <span className="font-semibold">Software Engineering</span>
                 </div>
                 <span
-                    className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-cardinal-light px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
+                    className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-cardinal bg-cardinal-light px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                     >
-                    <span className="size-2 bg-cardinal"></span>
+                    <span className="size-1.5 sm:size-2 bg-cardinal"></span>
  
                     Complete
                 </span>
@@ -214,9 +214,9 @@ function JrpHero() {
                     <span className="font-semibold">Full Stack Development</span>
                 </div>
                 <span
-                    className="inline-flex items-center gap-1.5 border-2 border-cardinal bg-off-white px-3 py-1.5 text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
+                    className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-cardinal bg-off-white px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-cardinal shadow-[2px_2px_0_0] shadow-cardinal"
                     >
-                    <span className="size-2 bg-cardinal"></span>
+                    <span className="size-1.5 sm:size-2 bg-cardinal"></span>
  
                     Active
                 </span>
@@ -231,9 +231,9 @@ function JrpHero() {
                     <span className="font-semibold">TBD</span>
                 </div>
                 <span
-                    className="inline-flex items-center gap-1.5 border-2 border-dark/15 bg-dark/5 px-3 py-1.5 text-sm/none font-semibold text-dark/50 shadow-[2px_2px_0_0] shadow-dark/15"
+                    className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-dark/15 bg-dark/5 px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-dark/50 shadow-[2px_2px_0_0] shadow-dark/15"
                 >
-                <span className="size-2 bg-dark/40"></span>
+                <span className="size-1.5 sm:size-2 bg-dark/40"></span>
  
                     Upcoming
                 </span>
