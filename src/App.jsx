@@ -30,7 +30,7 @@ function App() {
 
   return <div className={`min-h-screen w-full transition-color duration-600 ${modeStyles[mode]}`}>
     <Header mode={mode} onJrp={() => setMode("jrp")} onExp={() => setMode("exp")}/>
-    <main ref={panelRef} tabIndex={-1}>
+    <main ref={panelRef} tabIndex={-1} className="outline-none">
       {
         mode === "jrp" ?
         <JrpPanel/>
