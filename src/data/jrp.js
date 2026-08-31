@@ -20,7 +20,7 @@ export const rotations = [
   {
     num: '02',
     title: 'Software Engineer',
-    org: 'Registrar Office Application Development (ROAD)',
+    org: 'DoIT - Registrar Office Application Development (ROAD)',
     period: 'February 2026 - August 2026',
     badge: 'done',
     bullets: [
@@ -82,5 +82,10 @@ export const prodevCards = [
     name: 'IT Professionals Conference',
     type: 'Conference',
     detail: 'Event connecting IT Professionals across campus, designed to help attendees learn from each other through discussion of projects, experiences, and challenges.',
+  },
+  {
+    name: 'Plain Language Training',
+    type: 'Certification',
+    detail: 'Course series related to effective communication across large organizations, bridging knowledge gaps to deliver clear, concise messages.',
   },
 ]
