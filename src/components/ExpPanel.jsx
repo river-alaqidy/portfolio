@@ -174,9 +174,9 @@ function ExpHero() {
                         <span className="font-semibold">Junior Web Developer</span>
                     </div>
                     <span
-                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-amber bg-amber-dark/35 px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                        <span className="size-2 bg-amber"></span>
+                        <span className="size-1.5 sm:size-2 bg-amber"></span>
  
                         SSEC
                     </span>
@@ -187,10 +187,10 @@ function ExpHero() {
                     <div className="flex gap-3">
                         <span className="font-semibold">AI Recommendation Engine</span>
                     </div>
-                   <span
-                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                  <span
+                        className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-amber bg-amber-dark/35 px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                        <span className="size-2 bg-amber"></span>
+                        <span className="size-1.5 sm:size-2 bg-amber"></span>
  
                         PBS WI
                     </span>
@@ -202,9 +202,9 @@ function ExpHero() {
                         <span className="font-semibold">Teaching Assistant</span>
                     </div>
                     <span
-                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-amber bg-amber-dark/35 px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                        <span className="size-2 bg-amber"></span>
+                        <span className="size-1.5 sm:size-2 bg-amber"></span>
  
                         CS 571 - UW
                     </span>
@@ -216,9 +216,9 @@ function ExpHero() {
                         <span className="font-semibold">Projects</span>
                     </div>
                     <span
-                        className="inline-flex items-center gap-1.5 border-2 border-amber bg-amber-dark/35 px-3 py-1.5 text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap border-2 border-amber bg-amber-dark/35 px-2 py-1 sm:px-3 sm:py-1.5 text-xs/none sm:text-sm/none font-semibold text-off-white shadow-[2px_2px_0_0] shadow-amber"
                         >
-                        <span className="size-2 bg-amber"></span>
+                        <span className="size-1.5 sm:size-2 bg-amber"></span>
  
                         GitHub
                     </span>

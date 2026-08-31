@@ -22,7 +22,7 @@ function ProfDev() {
   return (
     <section
       id="jrp-prodev"
-      className="border-b-2 border-cardinal/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
+      className="flex justify-center border-b-2 border-cardinal/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
     >
       <div className="flex flex-col gap-4 md:flex-row md:gap-[5rem] items-start">
             <p className="md:w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem]">
