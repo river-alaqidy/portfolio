@@ -24,13 +24,12 @@ function ProfDev() {
       id="jrp-prodev"
       className="border-b-2 border-cardinal/35 px-[clamp(2rem,7vw,7rem)] py-[clamp(3rem,5.5vw,5.5rem)]"
     >
-      <div className="flex gap-[2rem] md:gap-[5rem] items-start">
-        <p className="text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem]">
-          Professional Development
-        </p>
+      <div className="flex flex-col gap-4 md:flex-row md:gap-[5rem] items-start">
+            <p className="md:w-[10rem] shrink-0 text-[1rem] tracking-[0.12em] uppercase font-medium text-cardinal pt-[0.3rem]">
+                Professional Development
+            </p>
 
-        <div
-          className="grid gap-6"
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:[grid-template-columns:repeat(auto-fill,minmax(190px,1fr))]"
           style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))' }}
         >
           {prodevCards.map((c) => (
